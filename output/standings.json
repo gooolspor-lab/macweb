@@ -1,13 +1,13 @@
 {
  "source": "mackolik",
- "generated_at": "2026-10-11T17:43:03+03:00",
+ "generated_at": "2026-10-11T18:10:42+03:00",
  "leagues": [
   {
    "id": "soccer/tur.1",
    "name": "Trendyol Süper Lig",
    "sport": "Futbol",
    "season": "2026-27 Turkish Super Lig",
-   "updated_at": "2026-10-11T17:43:03+03:00",
+   "updated_at": "2026-10-11T18:10:42+03:00",
    "teams": 18,
    "rows": [
     {
@@ -138,6 +138,24 @@
     },
     {
      "rank": 8,
+     "team": "Çorum FK",
+     "sourceTeam": "Çorum FK",
+     "abbr": "",
+     "logo": "https://file.mackolikfeeds.com/teams/eg0cqg1u8zz85ma9nzk0cijv",
+     "played": 7,
+     "wins": 3,
+     "draws": 1,
+     "losses": 3,
+     "goalsFor": 16,
+     "goalsAgainst": 12,
+     "diff": 4,
+     "points": 10,
+     "note": "",
+     "zone": "",
+     "zoneLabel": ""
+    },
+    {
+     "rank": 9,
      "team": "Kasımpaşa",
      "sourceTeam": "Kasımpaşa",
      "abbr": "",
@@ -155,7 +173,7 @@
      "zoneLabel": ""
     },
     {
-     "rank": 9,
+     "rank": 10,
      "team": "Çaykur Rizespor",
      "sourceTeam": "Ç. Rizespor",
      "abbr": "",
@@ -168,24 +186,6 @@
      "goalsAgainst": 9,
      "diff": -2,
      "points": 10,
-     "note": "",
-     "zone": "",
-     "zoneLabel": ""
-    },
-    {
-     "rank": 10,
-     "team": "Gaziantep FK",
-     "sourceTeam": "Gaziantep FK",
-     "abbr": "",
-     "logo": "https://file.mackolikfeeds.com/teams/2agzb2h4ppg7lfz9hn7eg1rqo",
-     "played": 6,
-     "wins": 2,
-     "draws": 2,
-     "losses": 2,
-     "goalsFor": 7,
-     "goalsAgainst": 7,
-     "diff": 0,
-     "points": 8,
      "note": "",
      "zone": "",
      "zoneLabel": ""
@@ -210,6 +210,24 @@
     },
     {
      "rank": 12,
+     "team": "Gaziantep FK",
+     "sourceTeam": "Gaziantep FK",
+     "abbr": "",
+     "logo": "https://file.mackolikfeeds.com/teams/2agzb2h4ppg7lfz9hn7eg1rqo",
+     "played": 7,
+     "wins": 2,
+     "draws": 2,
+     "losses": 3,
+     "goalsFor": 7,
+     "goalsAgainst": 10,
+     "diff": -3,
+     "points": 8,
+     "note": "",
+     "zone": "",
+     "zoneLabel": ""
+    },
+    {
+     "rank": 13,
      "team": "Gençlerbirliği",
      "sourceTeam": "Gençlerbirliği",
      "abbr": "",
@@ -227,7 +245,7 @@
      "zoneLabel": ""
     },
     {
-     "rank": 13,
+     "rank": 14,
      "team": "Erzurum BB",
      "sourceTeam": "Erzurumspor FK",
      "abbr": "",
@@ -240,24 +258,6 @@
      "goalsAgainst": 11,
      "diff": -8,
      "points": 8,
-     "note": "",
-     "zone": "",
-     "zoneLabel": ""
-    },
-    {
-     "rank": 14,
-     "team": "Çorum FK",
-     "sourceTeam": "Çorum FK",
-     "abbr": "",
-     "logo": "https://file.mackolikfeeds.com/teams/eg0cqg1u8zz85ma9nzk0cijv",
-     "played": 6,
-     "wins": 2,
-     "draws": 1,
-     "losses": 3,
-     "goalsFor": 13,
-     "goalsAgainst": 12,
-     "diff": 1,
-     "points": 7,
      "note": "",
      "zone": "",
      "zoneLabel": ""
