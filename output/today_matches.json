@@ -19,7 +19,7 @@
   },
   "date": "2026-10-12",
   "timezone": "Europe/Istanbul",
-  "generated_at": "2026-10-12T00:10:48+03:00",
+  "generated_at": "2026-10-12T01:31:28+03:00",
   "matches": [
     {
       "match_id": "zirve",
@@ -422,7 +422,7 @@
       "channel_id": "smarts",
       "logo_home": "https://img.sporekrani.com/teams/Hw3VdP5PmBy0WD4GWOCZpXJoq7nONUqRKS0kPuEM.png",
       "logo_away": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1280px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
-      "status": "live",
+      "status": "finished",
       "started": true,
       "raw_event": "23:00 | Arjantin Primera Division",
       "url": "https://fixbettv84.com/channel.html?id=smarts",
@@ -448,7 +448,7 @@
       "channel_id": "sms2",
       "logo_home": "https://img.sporekrani.com/teams/kBlMyNq5tLQFgkQUTQIMlA3DjmKJyhUsmsXW8v0m.png",
       "logo_away": "https://img.sporekrani.com/teams/XL3hnVxUzinrpunxx2uHLynsov1gMl86xj5PhhE1.png",
-      "status": "live",
+      "status": "finished",
       "started": true,
       "raw_event": "23:30 | Brezilya Serie A",
       "url": "https://fixbettv84.com/channel.html?id=sms2",

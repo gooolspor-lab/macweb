@@ -1,13 +1,8 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-11 21:11  
-> **Toplam maç:** 17  |  **Canlı:** 2  |  **Yaklaşan:** 12
-
-## 🔴 CANLI
-
-- 🔴 **Rosario Central vs Independiente** — CANLI · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
-- 🔴 **Palmeiras vs Corinthians** — CANLI · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
+> **Güncellenme:** 2026-10-11 22:31  
+> **Toplam maç:** 17  |  **Canlı:** 0  |  **Yaklaşan:** 12
 
 ## ⏰ YAKLAŞAN
 
@@ -29,6 +24,8 @@
 - ✅ **Troyes vs Marsilya** — MS · `21:45` | Fransa Ligue 1 <https://fixbettv84.com/channel.html?id=b3>
 - ✅ **Cagliari vs Juventus** — MS · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
 - ✅ **Racing Santander vs Valencia** — MS · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
+- ✅ **Rosario Central vs Independiente** — MS · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
+- ✅ **Palmeiras vs Corinthians** — MS · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
 
 ## ⭐ GÜNÜN MAÇI
 
@@ -38,13 +35,13 @@
 ## 🏆 Lig Bazlı
 
 ### Arjantin Primera Division
-- 🔴 Rosario Central vs Independiente — 23:00
+- ⏰ Rosario Central vs Independiente — 23:00
 
 ### Basketbol Süper Ligi
 - ⏰ Türk Telekom vs Beşiktaş — 18:00
 
 ### Brezilya Serie A
-- 🔴 Palmeiras vs Corinthians — 23:30
+- ⏰ Palmeiras vs Corinthians — 23:30
 
 ### Fransa Ligue 1
 - ⏰ Rennes vs Auxerre — 18:15
