@@ -1,31 +1,23 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-11 18:46  
-> **Toplam maç:** 24  |  **Canlı:** 3  |  **Yaklaşan:** 4
+> **Güncellenme:** 2026-10-11 19:12  
+> **Toplam maç:** 17  |  **Canlı:** 4  |  **Yaklaşan:** 2
 
 ## 🔴 CANLI
 
 - 🔴 **Barcelona vs Valencia Basket** — CANLI · `20:00` | İspanya Basketbol Ligi <https://fixbettv84.com/channel.html?id=smarts>
-- 🔴 **Benfica 2 - 0 Vitoria** — CANLI · `20:00` | Portekiz Liga NOS <https://fixbettv84.com/channel.html?id=b4>
 - 🔴 **Troyes 0 - 0 Marsilya** — CANLI · `21:45` | Fransa Ligue 1 <https://fixbettv84.com/channel.html?id=b3>
+- 🔴 **Cagliari 1 - 0 Juventus** — CANLI · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
+- 🔴 **Racing Santander 0 - 1 Valencia** — CANLI · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 
 ## ⏰ YAKLAŞAN
 
-- ⏰ **Cagliari vs Juventus** — YAKLAŞAN · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
-- ⏰ **Racing Santander vs Valencia** — YAKLAŞAN · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 - ⏰ **Rosario Central vs Independiente** — YAKLAŞAN · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Palmeiras vs Corinthians** — YAKLAŞAN · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
 
 ## ✅ BİTTİ
 
-- ✅ **Anadolu Efes vs Denizli Basket** — MS · `15:30` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
-- ✅ **Crystal Palace 3 - 1 Nottingham Forest** — MS · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=bm1>
-- ✅ **Hull City 2 - 2 Everton** — MS · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=b3>
-- ✅ **Lazio 3 - 1 Monza** — MS · `16:00` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
-- ✅ **Gaziantep FK 0 - 3 Çorum FK** — MS · `16:00` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
-- ✅ **Karagümrük vs Muğlaspor** — MS · `16:00` | Trendyol 1. Lig <https://fixbettv84.com/channel.html?id=trtspor>
-- ✅ **Eczacıbaşı vs Aras Kargo** — MS · `16:00` | TVF Sultanlar Ligi <https://fixbettv84.com/channel.html?id=trtspor2>
 - ✅ **Real Sociedad 3 - 2 Deportivo** — MS · `17:15` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 - ✅ **Türk Telekom vs Beşiktaş** — MS · `18:00` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
 - ✅ **Baskonia vs Joventut Badalona** — MS · `18:00` | İspanya Basketbol Ligi <https://fixbettv84.com/channel.html?id=smarts>
@@ -36,6 +28,7 @@
 - ✅ **Bursaspor 1 - 2 Mardin 1969** — MS · `19:00` | Trendyol 1. Lig <https://fixbettv84.com/channel.html?id=trtspor>
 - ✅ **Beşiktaş vs Fenerbahçe Medicana** — MS · `19:00` | TVF Sultanlar Ligi <https://fixbettv84.com/channel.html?id=trtspor2>
 - ✅ **Real Betis 5 - 2 Osasuna** — MS · `19:30` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
+- ✅ **Benfica 2 - 0 Vitoria** — MS · `20:00` | Portekiz Liga NOS <https://fixbettv84.com/channel.html?id=b4>
 
 ## ⭐ GÜNÜN MAÇI
 
@@ -48,7 +41,6 @@
 - ⏰ Rosario Central vs Independiente — 23:00
 
 ### Basketbol Süper Ligi
-- ⏰ Anadolu Efes vs Denizli Basket — 15:30
 - ⏰ Türk Telekom vs Beşiktaş — 18:00
 
 ### Brezilya Serie A
@@ -59,23 +51,18 @@
 - 🔴 Troyes vs Marsilya — 21:45
 
 ### Portekiz Liga NOS
-- 🔴 Benfica vs Vitoria — 20:00
+- ⏰ Benfica vs Vitoria — 20:00
 
 ### TVF Sultanlar Ligi
-- ⏰ Eczacıbaşı vs Aras Kargo — 16:00
 - ⏰ Beşiktaş vs Fenerbahçe Medicana — 19:00
 
 ### Trendyol 1. Lig
-- ⏰ Karagümrük vs Muğlaspor — 16:00
 - ⏰ Bursaspor vs Mardin 1969 — 19:00
 
 ### Trendyol Süper Lig
-- ⏰ Gaziantep FK vs Çorum FK — 16:00
 - ⏰ Beşiktaş vs Kocaelispor — 19:00
 
 ### İngiltere Premier Lig
-- ⏰ Crystal Palace vs Nottingham Forest — 16:00
-- ⏰ Hull City vs Everton — 16:00
 - ⏰ Liverpool vs Manchester City — 18:30
 
 ### İspanya Basketbol Ligi
@@ -85,12 +72,11 @@
 ### İspanya La Liga
 - ⏰ Real Sociedad vs Deportivo — 17:15
 - ⏰ Real Betis vs Osasuna — 19:30
-- ⏰ Racing Santander vs Valencia — 22:00
+- 🔴 Racing Santander vs Valencia — 22:00
 
 ### İtalya Serie A
-- ⏰ Lazio vs Monza — 16:00
 - ⏰ Sassuolo vs Milan — 19:00
-- ⏰ Cagliari vs Juventus — 21:45
+- 🔴 Cagliari vs Juventus — 21:45
 
 ---
 ## 📺 7/24 KANALLAR (31)

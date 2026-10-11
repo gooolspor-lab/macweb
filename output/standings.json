@@ -1,13 +1,13 @@
 {
  "source": "mackolik",
- "generated_at": "2026-10-11T18:10:42+03:00",
+ "generated_at": "2026-10-11T22:11:57+03:00",
  "leagues": [
   {
    "id": "soccer/tur.1",
    "name": "Trendyol Süper Lig",
    "sport": "Futbol",
    "season": "2026-27 Turkish Super Lig",
-   "updated_at": "2026-10-11T18:10:42+03:00",
+   "updated_at": "2026-10-11T22:11:57+03:00",
    "teams": 18,
    "rows": [
     {
@@ -30,6 +30,24 @@
     },
     {
      "rank": 2,
+     "team": "Beşiktaş",
+     "sourceTeam": "Beşiktaş",
+     "abbr": "",
+     "logo": "https://file.mackolikfeeds.com/teams/2ez9cvam9lp9jyhng3eh3znb4",
+     "played": 7,
+     "wins": 5,
+     "draws": 0,
+     "losses": 2,
+     "goalsFor": 16,
+     "goalsAgainst": 8,
+     "diff": 8,
+     "points": 15,
+     "note": "",
+     "zone": "europa",
+     "zoneLabel": "Avrupa kupaları"
+    },
+    {
+     "rank": 3,
      "team": "Amed SFK",
      "sourceTeam": "Amed SK",
      "abbr": "",
@@ -47,7 +65,7 @@
      "zoneLabel": "Avrupa kupaları"
     },
     {
-     "rank": 3,
+     "rank": 4,
      "team": "Fenerbahçe",
      "sourceTeam": "Fenerbahçe",
      "abbr": "",
@@ -61,11 +79,11 @@
      "diff": 13,
      "points": 13,
      "note": "",
-     "zone": "europa",
-     "zoneLabel": "Avrupa kupaları"
+     "zone": "",
+     "zoneLabel": ""
     },
     {
-     "rank": 4,
+     "rank": 5,
      "team": "Trabzonspor",
      "sourceTeam": "Trabzonspor",
      "abbr": "",
@@ -83,43 +101,7 @@
      "zoneLabel": ""
     },
     {
-     "rank": 5,
-     "team": "Beşiktaş",
-     "sourceTeam": "Beşiktaş",
-     "abbr": "",
-     "logo": "https://file.mackolikfeeds.com/teams/2ez9cvam9lp9jyhng3eh3znb4",
-     "played": 6,
-     "wins": 4,
-     "draws": 0,
-     "losses": 2,
-     "goalsFor": 14,
-     "goalsAgainst": 7,
-     "diff": 7,
-     "points": 12,
-     "note": "",
-     "zone": "",
-     "zoneLabel": ""
-    },
-    {
      "rank": 6,
-     "team": "Kocaelispor",
-     "sourceTeam": "Kocaelispor",
-     "abbr": "",
-     "logo": "https://file.mackolikfeeds.com/teams/b703zecenioz21dnj3p63v3f7",
-     "played": 6,
-     "wins": 4,
-     "draws": 0,
-     "losses": 2,
-     "goalsFor": 7,
-     "goalsAgainst": 4,
-     "diff": 3,
-     "points": 12,
-     "note": "",
-     "zone": "",
-     "zoneLabel": ""
-    },
-    {
-     "rank": 7,
      "team": "Alanyaspor",
      "sourceTeam": "Alanyaspor",
      "abbr": "",
@@ -128,6 +110,24 @@
      "wins": 3,
      "draws": 3,
      "losses": 1,
+     "goalsFor": 8,
+     "goalsAgainst": 6,
+     "diff": 2,
+     "points": 12,
+     "note": "",
+     "zone": "",
+     "zoneLabel": ""
+    },
+    {
+     "rank": 7,
+     "team": "Kocaelispor",
+     "sourceTeam": "Kocaelispor",
+     "abbr": "",
+     "logo": "https://file.mackolikfeeds.com/teams/b703zecenioz21dnj3p63v3f7",
+     "played": 7,
+     "wins": 4,
+     "draws": 0,
+     "losses": 3,
      "goalsFor": 8,
      "goalsAgainst": 6,
      "diff": 2,
