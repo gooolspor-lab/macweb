@@ -1,22 +1,22 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-11 13:58  
-> **Toplam maç:** 30  |  **Canlı:** 7  |  **Yaklaşan:** 17
+> **Güncellenme:** 2026-10-11 14:43  
+> **Toplam maç:** 24  |  **Canlı:** 8  |  **Yaklaşan:** 16
 
 ## 🔴 CANLI
 
 - 🔴 **Anadolu Efes vs Denizli Basket** — CANLI · `15:30` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
-- 🔴 **Crystal Palace 2 - 1 Nottingham Forest** — DEVRE · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=bm1>
-- 🔴 **Hull City 0 - 0 Everton** — DEVRE · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=b3>
-- 🔴 **Lazio 2 - 0 Monza** — DEVRE · `16:00` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
-- 🔴 **Gaziantep FK 0 - 1 Çorum FK** — DEVRE · `16:00` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
+- 🔴 **Crystal Palace 3 - 1 Nottingham Forest** — CANLI · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=bm1>
+- 🔴 **Hull City 2 - 2 Everton** — CANLI · `16:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=b3>
+- 🔴 **Lazio 2 - 1 Monza** — CANLI · `16:00` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
+- 🔴 **Gaziantep FK 0 - 3 Çorum FK** — CANLI · `16:00` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
 - 🔴 **Karagümrük vs Muğlaspor** — CANLI · `16:00` | Trendyol 1. Lig <https://fixbettv84.com/channel.html?id=trtspor>
 - 🔴 **Eczacıbaşı vs Aras Kargo** — CANLI · `16:00` | TVF Sultanlar Ligi <https://fixbettv84.com/channel.html?id=trtspor2>
+- 🔴 **Real Sociedad 0 - 0 Deportivo** — CANLI · `17:15` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 
 ## ⏰ YAKLAŞAN
 
-- ⏰ **Real Sociedad vs Deportivo** — YAKLAŞAN · `17:15` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 - ⏰ **Türk Telekom vs Beşiktaş** — YAKLAŞAN · `18:00` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
 - ⏰ **Baskonia vs Joventut Badalona** — YAKLAŞAN · `18:00` | İspanya Basketbol Ligi <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Rennes vs Auxerre** — YAKLAŞAN · `18:15` | Fransa Ligue 1 <https://fixbettv84.com/channel.html?id=bm1>
@@ -34,15 +34,6 @@
 - ⏰ **Rosario Central vs Independiente** — YAKLAŞAN · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Palmeiras vs Corinthians** — YAKLAŞAN · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
 
-## ✅ BİTTİ
-
-- ✅ **Trabzonspor vs Bandırma Bordo** — MS · `13:00` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
-- ✅ **Real Madrid vs Manresa** — MS · `13:00` | İspanya Basketbol Ligi <https://fixbettv84.com/channel.html?id=smarts>
-- ✅ **Como vs Roma** — MS · `13:30` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
-- ✅ **Konyaspor 0 - 0 İstanbul Başakşehir** — MS · `13:30` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
-- ✅ **İstanbul Gençlik vs Trabzon BB** — MS · `14:00` | 14:00  Erkekler Süper Ligi <https://fixbettv84.com/channel.html?id=trtspor2>
-- ✅ **Elche 0 - 0 Celta Vigo** — MS · `15:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
-
 ## ⭐ GÜNÜN MAÇI
 
 - ⏰ **Beşiktaş vs Kocaelispor** — YAKLAŞAN · `19:00` | Trendyol Süper Lig ★ **Günün Maçı** <https://fixbettv84.com/channel.html?id=zirve>
@@ -50,14 +41,10 @@
 ---
 ## 🏆 Lig Bazlı
 
-### 14:00  Erkekler Süper Ligi
-- ⏰ İstanbul Gençlik vs Trabzon BB — 14:00
-
 ### Arjantin Primera Division
 - ⏰ Rosario Central vs Independiente — 23:00
 
 ### Basketbol Süper Ligi
-- ⏰ Trabzonspor vs Bandırma Bordo — 13:00
 - 🔴 Anadolu Efes vs Denizli Basket — 15:30
 - ⏰ Türk Telekom vs Beşiktaş — 18:00
 
@@ -80,29 +67,25 @@
 - ⏰ Bursaspor vs Mardin 1969 — 19:00
 
 ### Trendyol Süper Lig
-- ⏰ Konyaspor vs İstanbul Başakşehir — 13:30
-- ⏰ Gaziantep FK vs Çorum FK — 16:00
+- 🔴 Gaziantep FK vs Çorum FK — 16:00
 - ⏰ Beşiktaş vs Kocaelispor — 19:00
 
 ### İngiltere Premier Lig
-- ⏰ Crystal Palace vs Nottingham Forest — 16:00
-- ⏰ Hull City vs Everton — 16:00
+- 🔴 Crystal Palace vs Nottingham Forest — 16:00
+- 🔴 Hull City vs Everton — 16:00
 - ⏰ Liverpool vs Manchester City — 18:30
 
 ### İspanya Basketbol Ligi
-- ⏰ Real Madrid vs Manresa — 13:00
 - ⏰ Baskonia vs Joventut Badalona — 18:00
 - ⏰ Barcelona vs Valencia Basket — 20:00
 
 ### İspanya La Liga
-- ⏰ Elche vs Celta Vigo — 15:00
-- ⏰ Real Sociedad vs Deportivo — 17:15
+- 🔴 Real Sociedad vs Deportivo — 17:15
 - ⏰ Real Betis vs Osasuna — 19:30
 - ⏰ Racing Santander vs Valencia — 22:00
 
 ### İtalya Serie A
-- ⏰ Como vs Roma — 13:30
-- ⏰ Lazio vs Monza — 16:00
+- 🔴 Lazio vs Monza — 16:00
 - ⏰ Sassuolo vs Milan — 19:00
 - ⏰ Cagliari vs Juventus — 21:45
 
