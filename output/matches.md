@@ -1,21 +1,19 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-12 17:49  
-> **Toplam maç:** 11  |  **Canlı:** 5  |  **Yaklaşan:** 5
+> **Güncellenme:** 2026-10-12 18:20  
+> **Toplam maç:** 11  |  **Canlı:** 5  |  **Yaklaşan:** 3
 
 ## 🔴 CANLI
 
-- 🔴 **Al Wasl 1 - 2 Al Ahli** — CANLI · `19:00` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=sms2>
-- 🔴 **Galatasaray MCT vs Bursaspor** — CANLI · `19:00` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
 - 🔴 **Atalanta 3 - 1 Venezia** — CANLI · `19:30` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
 - 🔴 **Ziraat Bankkart vs Galatasaray** — CANLI · `19:30` | TVF Axa Erkekler Şampiyonlar Kupası <https://fixbettv84.com/channel.html?id=trtspor>
-- 🔴 **Eyüpspor 0 - 1 Göztepe** — CANLI · `20:00` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
+- 🔴 **Eyüpspor 0 - 2 Göztepe** — CANLI · `20:00` | Trendyol Süper Lig <https://fixbettv84.com/channel.html?id=zirve>
+- 🔴 **Al Gharafa vs Esteghlal FC** — CANLI · `21:15` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=sms2>
+- 🔴 **Al Nassr Riyadh vs Neftchi Fargona** — CANLI · `21:15` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
 
 ## ⏰ YAKLAŞAN
 
-- ⏰ **Al Gharafa vs Esteghlal FC** — YAKLAŞAN · `21:15` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=sms2>
-- ⏰ **Al Nassr Riyadh vs Neftchi Fargona** — YAKLAŞAN · `21:15` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Torino vs Udinese** — YAKLAŞAN · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
 - ⏰ **Coventry vs Newcastle** — YAKLAŞAN · `22:00` | İngiltere Premier Lig <https://fixbettv84.com/channel.html?id=b3>
 - ⏰ **Levante vs Sevilla** — YAKLAŞAN · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
@@ -23,18 +21,20 @@
 ## ✅ BİTTİ
 
 - ✅ **Pakhtakor 1 - 1 Al Qadsiah** — MS · `16:45` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
+- ✅ **Al Wasl 1 - 3 Al Ahli** — MS · `19:00` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=sms2>
+- ✅ **Galatasaray MCT vs Bursaspor** — MS · `19:00` | Basketbol Süper Ligi <https://fixbettv84.com/channel.html?id=b5>
 
 ---
 ## 🏆 Lig Bazlı
 
 ### AFC Şampiyonlar Ligi
 - ⏰ Pakhtakor vs Al Qadsiah — 16:45
-- 🔴 Al Wasl vs Al Ahli — 19:00
-- ⏰ Al Gharafa vs Esteghlal FC — 21:15
-- ⏰ Al Nassr Riyadh vs Neftchi Fargona — 21:15
+- ⏰ Al Wasl vs Al Ahli — 19:00
+- 🔴 Al Gharafa vs Esteghlal FC — 21:15
+- 🔴 Al Nassr Riyadh vs Neftchi Fargona — 21:15
 
 ### Basketbol Süper Ligi
-- 🔴 Galatasaray MCT vs Bursaspor — 19:00
+- ⏰ Galatasaray MCT vs Bursaspor — 19:00
 
 ### TVF Axa Erkekler Şampiyonlar Kupası
 - 🔴 Ziraat Bankkart vs Galatasaray — 19:30
