@@ -10,7 +10,11 @@ mirror_now: fixbettv84.com
 state: OK
 active_mirrors:
 - fixbettv84.com
+- fixbettv27.com
 - fixbettv26.com
-last_checked: '2026-10-12T02:08:51+00:00'
+- fixbettv13.com
+- fixbettv12.com
+- fixbettv11.com
+last_checked: '2026-10-12T09:14:38+00:00'
 note: OK
 probed: 200
