@@ -1,8 +1,8 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-12 01:42  
-> **Toplam maç:** 17  |  **Canlı:** 0  |  **Yaklaşan:** 12
+> **Güncellenme:** 2026-10-12 01:55  
+> **Toplam maç:** 17  |  **Canlı:** 0  |  **Yaklaşan:** 17
 
 ## ⏰ YAKLAŞAN
 
@@ -18,14 +18,11 @@
 - ⏰ **Real Betis vs Osasuna** — YAKLAŞAN · `19:30` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
 - ⏰ **Barcelona vs Valencia Basket** — YAKLAŞAN · `20:00` | İspanya Basketbol Ligi <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Benfica vs Vitoria** — YAKLAŞAN · `20:00` | Portekiz Liga NOS <https://fixbettv84.com/channel.html?id=b4>
-
-## ✅ BİTTİ
-
-- ✅ **Troyes vs Marsilya** — MS · `21:45` | Fransa Ligue 1 <https://fixbettv84.com/channel.html?id=b3>
-- ✅ **Cagliari vs Juventus** — MS · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
-- ✅ **Racing Santander vs Valencia** — MS · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
-- ✅ **Rosario Central vs Independiente** — MS · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
-- ✅ **Palmeiras vs Corinthians** — MS · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
+- ⏰ **Troyes vs Marsilya** — YAKLAŞAN · `21:45` | Fransa Ligue 1 <https://fixbettv84.com/channel.html?id=b3>
+- ⏰ **Cagliari vs Juventus** — YAKLAŞAN · `21:45` | İtalya Serie A <https://fixbettv84.com/channel.html?id=ss2>
+- ⏰ **Racing Santander vs Valencia** — YAKLAŞAN · `22:00` | İspanya La Liga <https://fixbettv84.com/channel.html?id=ss>
+- ⏰ **Rosario Central vs Independiente** — YAKLAŞAN · `23:00` | Arjantin Primera Division <https://fixbettv84.com/channel.html?id=smarts>
+- ⏰ **Palmeiras vs Corinthians** — YAKLAŞAN · `23:30` | Brezilya Serie A <https://fixbettv84.com/channel.html?id=sms2>
 
 ## ⭐ GÜNÜN MAÇI
 

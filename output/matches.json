@@ -13,21 +13,21 @@
       "fixbettv12.com",
       "fixbettv11.com"
     ],
-    "last_checked": "2026-10-11T22:55:34+00:00",
+    "last_checked": "2026-10-12T01:54:39+00:00",
     "note": "OK",
     "probed": 200
   },
   "categories": {
     "meta": {
-      "generated_at": "2026-10-12T04:42:49+03:00",
+      "generated_at": "2026-10-12T04:54:05+03:00",
       "date": "2026-10-12",
       "total_matches": 17
     },
     "counts": {
       "total": 17,
       "live": 0,
-      "upcoming": 12,
-      "finished": 5,
+      "upcoming": 17,
+      "finished": 0,
       "match_of_day": 1,
       "postponed": 0,
       "cancelled": 0,
@@ -351,9 +351,7 @@
         "event_id": "",
         "starts_at": "2026-10-12T20:00:00+03:00",
         "status_clock": ""
-      }
-    ],
-    "finished": [
+      },
       {
         "match_id": "b3",
         "home": "Troyes",
@@ -365,8 +363,8 @@
         "channel_id": "b3",
         "logo_home": "https://img.sporekrani.com/teams/merEUshzKsL8eSWmrJyTmqmTamPp750C8hrG6adz.png",
         "logo_away": "https://img.sporekrani.com/teams/44iDo4u0c4isz06F25UBz1IpLjYNIWQgTQRwrw1H.png",
-        "status": "finished",
-        "started": true,
+        "status": "upcoming",
+        "started": false,
         "raw_event": "21:45 | Fransa Ligue 1",
         "url": "https://fixbettv84.com/channel.html?id=b3",
         "fetched_at": "",
@@ -377,7 +375,7 @@
         "score_source": "",
         "score_updated_at": "",
         "event_id": "",
-        "starts_at": "2026-10-11T21:45:00+03:00",
+        "starts_at": "2026-10-12T21:45:00+03:00",
         "status_clock": ""
       },
       {
@@ -391,8 +389,8 @@
         "channel_id": "ss2",
         "logo_home": "https://img.sporekrani.com/teams/2jS5HSNcX7LMXhgX2YDQACCOBdu2k4TKFH1Emv88.png",
         "logo_away": "https://img.sporekrani.com/teams/vO6cd2q3gTvdTPyowsHljArWR9GOZUMm7O1jfuGv.png",
-        "status": "finished",
-        "started": true,
+        "status": "upcoming",
+        "started": false,
         "raw_event": "21:45 | İtalya Serie A",
         "url": "https://fixbettv84.com/channel.html?id=ss2",
         "fetched_at": "",
@@ -403,7 +401,7 @@
         "score_source": "",
         "score_updated_at": "",
         "event_id": "",
-        "starts_at": "2026-10-11T21:45:00+03:00",
+        "starts_at": "2026-10-12T21:45:00+03:00",
         "status_clock": ""
       },
       {
@@ -417,8 +415,8 @@
         "channel_id": "ss",
         "logo_home": "https://img.sporekrani.com/teams/zNpKuaZC8yofM3jNlfJ1utYUpA7xWIlZaCasreXJ.png",
         "logo_away": "https://img.sporekrani.com/teams/Y9VhvVlSoziCgaYOC7LWQxCpuf5Kjzyj2CG5TzFZ.png",
-        "status": "finished",
-        "started": true,
+        "status": "upcoming",
+        "started": false,
         "raw_event": "22:00 | İspanya La Liga",
         "url": "https://fixbettv84.com/channel.html?id=ss",
         "fetched_at": "",
@@ -429,7 +427,7 @@
         "score_source": "",
         "score_updated_at": "",
         "event_id": "",
-        "starts_at": "2026-10-11T22:00:00+03:00",
+        "starts_at": "2026-10-12T22:00:00+03:00",
         "status_clock": ""
       },
       {
@@ -443,8 +441,8 @@
         "channel_id": "smarts",
         "logo_home": "https://img.sporekrani.com/teams/Hw3VdP5PmBy0WD4GWOCZpXJoq7nONUqRKS0kPuEM.png",
         "logo_away": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1280px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
-        "status": "finished",
-        "started": true,
+        "status": "upcoming",
+        "started": false,
         "raw_event": "23:00 | Arjantin Primera Division",
         "url": "https://fixbettv84.com/channel.html?id=smarts",
         "fetched_at": "",
@@ -455,7 +453,7 @@
         "score_source": "",
         "score_updated_at": "",
         "event_id": "",
-        "starts_at": "2026-10-11T23:00:00+03:00",
+        "starts_at": "2026-10-12T23:00:00+03:00",
         "status_clock": ""
       },
       {
@@ -469,8 +467,8 @@
         "channel_id": "sms2",
         "logo_home": "https://img.sporekrani.com/teams/kBlMyNq5tLQFgkQUTQIMlA3DjmKJyhUsmsXW8v0m.png",
         "logo_away": "https://img.sporekrani.com/teams/XL3hnVxUzinrpunxx2uHLynsov1gMl86xj5PhhE1.png",
-        "status": "finished",
-        "started": true,
+        "status": "upcoming",
+        "started": false,
         "raw_event": "23:30 | Brezilya Serie A",
         "url": "https://fixbettv84.com/channel.html?id=sms2",
         "fetched_at": "",
@@ -481,10 +479,11 @@
         "score_source": "",
         "score_updated_at": "",
         "event_id": "",
-        "starts_at": "2026-10-11T23:30:00+03:00",
+        "starts_at": "2026-10-12T23:30:00+03:00",
         "status_clock": ""
       }
     ],
+    "finished": [],
     "match_of_the_day": [
       {
         "match_id": "zirve",
@@ -526,8 +525,8 @@
           "channel_id": "smarts",
           "logo_home": "https://img.sporekrani.com/teams/Hw3VdP5PmBy0WD4GWOCZpXJoq7nONUqRKS0kPuEM.png",
           "logo_away": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1280px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "23:00 | Arjantin Primera Division",
           "url": "https://fixbettv84.com/channel.html?id=smarts",
           "fetched_at": "",
@@ -538,7 +537,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T23:00:00+03:00",
+          "starts_at": "2026-10-12T23:00:00+03:00",
           "status_clock": ""
         }
       ],
@@ -582,8 +581,8 @@
           "channel_id": "sms2",
           "logo_home": "https://img.sporekrani.com/teams/kBlMyNq5tLQFgkQUTQIMlA3DjmKJyhUsmsXW8v0m.png",
           "logo_away": "https://img.sporekrani.com/teams/XL3hnVxUzinrpunxx2uHLynsov1gMl86xj5PhhE1.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "23:30 | Brezilya Serie A",
           "url": "https://fixbettv84.com/channel.html?id=sms2",
           "fetched_at": "",
@@ -594,7 +593,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T23:30:00+03:00",
+          "starts_at": "2026-10-12T23:30:00+03:00",
           "status_clock": ""
         }
       ],
@@ -636,8 +635,8 @@
           "channel_id": "b3",
           "logo_home": "https://img.sporekrani.com/teams/merEUshzKsL8eSWmrJyTmqmTamPp750C8hrG6adz.png",
           "logo_away": "https://img.sporekrani.com/teams/44iDo4u0c4isz06F25UBz1IpLjYNIWQgTQRwrw1H.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "21:45 | Fransa Ligue 1",
           "url": "https://fixbettv84.com/channel.html?id=b3",
           "fetched_at": "",
@@ -648,7 +647,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T21:45:00+03:00",
+          "starts_at": "2026-10-12T21:45:00+03:00",
           "status_clock": ""
         }
       ],
@@ -910,8 +909,8 @@
           "channel_id": "ss",
           "logo_home": "https://img.sporekrani.com/teams/zNpKuaZC8yofM3jNlfJ1utYUpA7xWIlZaCasreXJ.png",
           "logo_away": "https://img.sporekrani.com/teams/Y9VhvVlSoziCgaYOC7LWQxCpuf5Kjzyj2CG5TzFZ.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "22:00 | İspanya La Liga",
           "url": "https://fixbettv84.com/channel.html?id=ss",
           "fetched_at": "",
@@ -922,7 +921,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T22:00:00+03:00",
+          "starts_at": "2026-10-12T22:00:00+03:00",
           "status_clock": ""
         }
       ],
@@ -964,8 +963,8 @@
           "channel_id": "ss2",
           "logo_home": "https://img.sporekrani.com/teams/2jS5HSNcX7LMXhgX2YDQACCOBdu2k4TKFH1Emv88.png",
           "logo_away": "https://img.sporekrani.com/teams/vO6cd2q3gTvdTPyowsHljArWR9GOZUMm7O1jfuGv.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "21:45 | İtalya Serie A",
           "url": "https://fixbettv84.com/channel.html?id=ss2",
           "fetched_at": "",
@@ -976,7 +975,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T21:45:00+03:00",
+          "starts_at": "2026-10-12T21:45:00+03:00",
           "status_clock": ""
         }
       ]
@@ -1282,8 +1281,8 @@
           "channel_id": "b3",
           "logo_home": "https://img.sporekrani.com/teams/merEUshzKsL8eSWmrJyTmqmTamPp750C8hrG6adz.png",
           "logo_away": "https://img.sporekrani.com/teams/44iDo4u0c4isz06F25UBz1IpLjYNIWQgTQRwrw1H.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "21:45 | Fransa Ligue 1",
           "url": "https://fixbettv84.com/channel.html?id=b3",
           "fetched_at": "",
@@ -1294,7 +1293,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T21:45:00+03:00",
+          "starts_at": "2026-10-12T21:45:00+03:00",
           "status_clock": ""
         },
         {
@@ -1308,8 +1307,8 @@
           "channel_id": "ss2",
           "logo_home": "https://img.sporekrani.com/teams/2jS5HSNcX7LMXhgX2YDQACCOBdu2k4TKFH1Emv88.png",
           "logo_away": "https://img.sporekrani.com/teams/vO6cd2q3gTvdTPyowsHljArWR9GOZUMm7O1jfuGv.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "21:45 | İtalya Serie A",
           "url": "https://fixbettv84.com/channel.html?id=ss2",
           "fetched_at": "",
@@ -1320,7 +1319,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T21:45:00+03:00",
+          "starts_at": "2026-10-12T21:45:00+03:00",
           "status_clock": ""
         },
         {
@@ -1334,8 +1333,8 @@
           "channel_id": "ss",
           "logo_home": "https://img.sporekrani.com/teams/zNpKuaZC8yofM3jNlfJ1utYUpA7xWIlZaCasreXJ.png",
           "logo_away": "https://img.sporekrani.com/teams/Y9VhvVlSoziCgaYOC7LWQxCpuf5Kjzyj2CG5TzFZ.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "22:00 | İspanya La Liga",
           "url": "https://fixbettv84.com/channel.html?id=ss",
           "fetched_at": "",
@@ -1346,7 +1345,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T22:00:00+03:00",
+          "starts_at": "2026-10-12T22:00:00+03:00",
           "status_clock": ""
         },
         {
@@ -1360,8 +1359,8 @@
           "channel_id": "smarts",
           "logo_home": "https://img.sporekrani.com/teams/Hw3VdP5PmBy0WD4GWOCZpXJoq7nONUqRKS0kPuEM.png",
           "logo_away": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1280px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "23:00 | Arjantin Primera Division",
           "url": "https://fixbettv84.com/channel.html?id=smarts",
           "fetched_at": "",
@@ -1372,7 +1371,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T23:00:00+03:00",
+          "starts_at": "2026-10-12T23:00:00+03:00",
           "status_clock": ""
         },
         {
@@ -1386,8 +1385,8 @@
           "channel_id": "sms2",
           "logo_home": "https://img.sporekrani.com/teams/kBlMyNq5tLQFgkQUTQIMlA3DjmKJyhUsmsXW8v0m.png",
           "logo_away": "https://img.sporekrani.com/teams/XL3hnVxUzinrpunxx2uHLynsov1gMl86xj5PhhE1.png",
-          "status": "finished",
-          "started": true,
+          "status": "upcoming",
+          "started": false,
           "raw_event": "23:30 | Brezilya Serie A",
           "url": "https://fixbettv84.com/channel.html?id=sms2",
           "fetched_at": "",
@@ -1398,7 +1397,7 @@
           "score_source": "",
           "score_updated_at": "",
           "event_id": "",
-          "starts_at": "2026-10-11T23:30:00+03:00",
+          "starts_at": "2026-10-12T23:30:00+03:00",
           "status_clock": ""
         }
       ],
@@ -1756,8 +1755,8 @@
       "channel_id": "b3",
       "logo_home": "https://img.sporekrani.com/teams/merEUshzKsL8eSWmrJyTmqmTamPp750C8hrG6adz.png",
       "logo_away": "https://img.sporekrani.com/teams/44iDo4u0c4isz06F25UBz1IpLjYNIWQgTQRwrw1H.png",
-      "status": "finished",
-      "started": true,
+      "status": "upcoming",
+      "started": false,
       "raw_event": "21:45 | Fransa Ligue 1",
       "url": "https://fixbettv84.com/channel.html?id=b3",
       "fetched_at": "",
@@ -1768,7 +1767,7 @@
       "score_source": "",
       "score_updated_at": "",
       "event_id": "",
-      "starts_at": "2026-10-11T21:45:00+03:00",
+      "starts_at": "2026-10-12T21:45:00+03:00",
       "status_clock": ""
     },
     {
@@ -1782,8 +1781,8 @@
       "channel_id": "ss2",
       "logo_home": "https://img.sporekrani.com/teams/2jS5HSNcX7LMXhgX2YDQACCOBdu2k4TKFH1Emv88.png",
       "logo_away": "https://img.sporekrani.com/teams/vO6cd2q3gTvdTPyowsHljArWR9GOZUMm7O1jfuGv.png",
-      "status": "finished",
-      "started": true,
+      "status": "upcoming",
+      "started": false,
       "raw_event": "21:45 | İtalya Serie A",
       "url": "https://fixbettv84.com/channel.html?id=ss2",
       "fetched_at": "",
@@ -1794,7 +1793,7 @@
       "score_source": "",
       "score_updated_at": "",
       "event_id": "",
-      "starts_at": "2026-10-11T21:45:00+03:00",
+      "starts_at": "2026-10-12T21:45:00+03:00",
       "status_clock": ""
     },
     {
@@ -1808,8 +1807,8 @@
       "channel_id": "ss",
       "logo_home": "https://img.sporekrani.com/teams/zNpKuaZC8yofM3jNlfJ1utYUpA7xWIlZaCasreXJ.png",
       "logo_away": "https://img.sporekrani.com/teams/Y9VhvVlSoziCgaYOC7LWQxCpuf5Kjzyj2CG5TzFZ.png",
-      "status": "finished",
-      "started": true,
+      "status": "upcoming",
+      "started": false,
       "raw_event": "22:00 | İspanya La Liga",
       "url": "https://fixbettv84.com/channel.html?id=ss",
       "fetched_at": "",
@@ -1820,7 +1819,7 @@
       "score_source": "",
       "score_updated_at": "",
       "event_id": "",
-      "starts_at": "2026-10-11T22:00:00+03:00",
+      "starts_at": "2026-10-12T22:00:00+03:00",
       "status_clock": ""
     },
     {
@@ -1834,8 +1833,8 @@
       "channel_id": "smarts",
       "logo_home": "https://img.sporekrani.com/teams/Hw3VdP5PmBy0WD4GWOCZpXJoq7nONUqRKS0kPuEM.png",
       "logo_away": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1280px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
-      "status": "finished",
-      "started": true,
+      "status": "upcoming",
+      "started": false,
       "raw_event": "23:00 | Arjantin Primera Division",
       "url": "https://fixbettv84.com/channel.html?id=smarts",
       "fetched_at": "",
@@ -1846,7 +1845,7 @@
       "score_source": "",
       "score_updated_at": "",
       "event_id": "",
-      "starts_at": "2026-10-11T23:00:00+03:00",
+      "starts_at": "2026-10-12T23:00:00+03:00",
       "status_clock": ""
     },
     {
@@ -1860,8 +1859,8 @@
       "channel_id": "sms2",
       "logo_home": "https://img.sporekrani.com/teams/kBlMyNq5tLQFgkQUTQIMlA3DjmKJyhUsmsXW8v0m.png",
       "logo_away": "https://img.sporekrani.com/teams/XL3hnVxUzinrpunxx2uHLynsov1gMl86xj5PhhE1.png",
-      "status": "finished",
-      "started": true,
+      "status": "upcoming",
+      "started": false,
       "raw_event": "23:30 | Brezilya Serie A",
       "url": "https://fixbettv84.com/channel.html?id=sms2",
       "fetched_at": "",
@@ -1872,7 +1871,7 @@
       "score_source": "",
       "score_updated_at": "",
       "event_id": "",
-      "starts_at": "2026-10-11T23:30:00+03:00",
+      "starts_at": "2026-10-12T23:30:00+03:00",
       "status_clock": ""
     }
   ],
