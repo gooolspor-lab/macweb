@@ -388,7 +388,7 @@ def test_refresh_writes_output_and_site_embeds_extra():
             extras.EXTRA_OUTPUT, site.INDEX_OUT = orig_out, orig_idx
 
     assert "{{" not in html
-    assert 'data-tab="extraTab"' in html and "⚡ EXTRA" in html
+    assert 'data-tab="extraTab"' in html and "EXTRA PANELLER" in html
     assert '"atom:bein-sports-1"' in html
     assert "https://edge.x/bs1/index.m3u8" in html
     assert "https://tv.atomspor.workers.dev/?ID=s-sport" in html
