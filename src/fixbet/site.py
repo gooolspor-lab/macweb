@@ -1,6 +1,6 @@
 """GitHub Pages için repo köküne index.html üretir.
 
-Kullanıcının İNADİNA TV şablonunu (src/fixbet/templates/index.html) kullanır ve:
+Kullanıcının MEGA STAR TV şablonunu (src/fixbet/templates/index.html) kullanır ve:
   * 7/24 kanal listesini güncel adresle üretir (ad, marka, ikon, durum),
   * günün maçlarını **gerçek kaynak verisinden** gömer (uydurma/sabit maç yok),
   * istemcinin taze veri çekebilmesi için output/today_matches.json yolunu verir.

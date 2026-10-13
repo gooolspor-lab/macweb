@@ -1,5 +1,5 @@
 /**
- * İNADİNA TV index.html arayüz testleri (jsdom).
+ * MEGA STAR TV index.html arayüz testleri (jsdom).
  *
  * Bu testler üretilen index.html'in *gerçek* JavaScript'ini çalıştırır:
  * kanal kartları, ızgara/liste görünümü, player'e kaydırma, günün maçları,
