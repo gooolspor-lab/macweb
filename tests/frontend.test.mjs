@@ -745,6 +745,25 @@ test("eksik/geçersiz skor 0 olmaz; uzun takım isimleri kaçırılır ve üç s
   for (const id of ['bad1','bad2','bad3','bad4']) assert.equal(byEvent(window,id).querySelector('.match-score'),null);
 });
 
+test("kart armaları VIP madalyon olarak çizilir; logosuz takımda baş harf rozeti görünür",async()=>{
+  const json={date:'2026-09-06',matches:[
+    remoteRow('crest','live',[2,1],{home:'Galatasaray',away:'Fenerbahçe',
+      logo_home:'https://cdn.test/gs.png',logo_away:'https://cdn.test/fb.png'}),
+    remoteRow('nocrest','NS',[null,null],{home:'Kyoto Sanga',away:'Ratchaburi Mitr Phol'})]};
+  const {window}=await loadPage({fetchImpl:async url=>({ok:true,json:async()=>String(url).includes('extra_channels')?EXTRA:json})});
+  await window.inadina.refreshMatches();
+  const logos=byEvent(window,'crest');
+  assert.equal(logos.querySelectorAll('.team-crest img').length,2,'iki arma da madalyon içinde gömülmeli');
+  assert.equal(logos.querySelector('.team-logo'),null,'eski küçük satır içi logo kutusu kalmamalı');
+  assert.equal(logos.querySelectorAll('.team-crest.is-fallback').length,0,'arması olan takımda baş harf rozeti gizli kalmalı');
+  assert.equal(logos.querySelector('.crest-fallback').textContent,'G','baş harf rozeti yedek olarak hazır bekler');
+  const empty=byEvent(window,'nocrest');
+  assert.equal(empty.querySelectorAll('.team-crest img').length,0,'logosuz takımda ağ isteği yapacak img üretilmemeli');
+  assert.equal(empty.querySelectorAll('.team-crest.is-fallback .crest-fallback').length,2);
+  assert.equal(empty.querySelector('.crest-fallback').textContent,'KS','baş harfler takım adından üretilir');
+  assert.equal(empty.querySelector('.match-teams').children.length,3);
+});
+
 test("maç saati ziyaretçinin saat dilimine bağlı değil; geçerli start ISO ve 30 saniye sınırı",async()=>{
   const {window}=await loadPage();
   const cs=window.inadina.computeState, m={time:'20:00',date:'2026-09-06',sport:'Futbol',statusSource:'schedule'};

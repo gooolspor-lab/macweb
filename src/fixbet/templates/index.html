@@ -496,19 +496,96 @@
         .match-status-tag.halftime { background: var(--gold-soft); color: var(--gold); }
         .match-status-tag.mod { background: var(--gold); color: #fff; }
         .match-card.is-live .match-status-tag:not(.mod):not(.halftime) { background: var(--live-soft); color: var(--live); }
+        /* --- VIP madalyon sahnesi: armalar artık kartın göbeğinde, büyük, halkalı ve ışıltılı --- */
         .match-teams {
+            position: relative; isolation: isolate;
             font-size: 0.92rem; font-weight: 700; color: var(--ink);
-            display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; text-align: center;
+            display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: 6px; text-align: center;
+            padding: 14px 10px 12px; border-radius: 14px; overflow: hidden;
+            background:
+                radial-gradient(120% 150% at 50% -58%, color-mix(in srgb, var(--gold) 15%, transparent), transparent 62%),
+                linear-gradient(180deg, color-mix(in srgb, var(--surface-3) 60%, transparent), transparent 84%);
+            border: 1px solid color-mix(in srgb, var(--line-2) 52%, transparent);
         }
-        .match-teams .team-logo img { width: 22px; height: 22px; object-fit: contain; display: block; }
-        .match-teams .mt-vs { color: var(--muted); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
-        .match-teams .mt-vs.no-score { text-transform: none; letter-spacing: 0; font-size: 0.66rem; white-space: nowrap; font-weight: 500; }
-        .match-team { display: flex; align-items: center; gap: 7px; min-width: 0; }
-        .home-team { justify-content: flex-end; text-align: right; }
-        .away-team { justify-content: flex-start; text-align: left; }
-        .team-logo { flex: 0 0 22px; }
-        .team-name { min-width: 0; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.25; }
+        .match-teams::before {
+            content: ""; position: absolute; left: 8%; right: 8%; top: -60%; height: 130%;
+            background: radial-gradient(closest-side, color-mix(in srgb, var(--gold) 22%, transparent), transparent 74%);
+            opacity: .55; pointer-events: none;
+        }
+        .match-team { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+        .home-team, .away-team { justify-content: flex-start; text-align: center; }
+        .team-crest {
+            position: relative; width: 62px; height: 62px; flex: 0 0 62px; border-radius: 50%;
+            display: grid; place-items: center; padding: 3px; overflow: hidden;
+            background: conic-gradient(from 212deg, #6f5a20, #f8e7ae 16%, #c79a35 34%, #fff6d8 52%, #8a6a24 74%, #edd48d 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.06), 0 0 18px color-mix(in srgb, var(--gold) 18%, transparent);
+            transition: transform .22s ease, box-shadow .22s ease;
+        }
+        .team-crest::before {
+            content: ""; position: absolute; top: -30%; bottom: -30%; left: -60%; right: -60%; z-index: 2;
+            background: linear-gradient(104deg, transparent 40%, rgba(255,255,255,.55) 50%, transparent 60%);
+            opacity: 0; pointer-events: none; animation: crestShine 6.4s ease-in-out infinite;
+        }
+        .team-crest::after {
+            content: ""; position: absolute; inset: 0; z-index: 3; border-radius: 50%; pointer-events: none;
+            background: linear-gradient(152deg, rgba(255,255,255,.42), transparent 44%);
+            mix-blend-mode: screen; opacity: .3;
+        }
+        @keyframes crestShine {
+            0%, 66% { opacity: 0; transform: translateX(-42%); }
+            76% { opacity: .85; }
+            90%, 100% { opacity: 0; transform: translateX(42%); }
+        }
+        .team-crest img, .team-crest .crest-fallback {
+            width: 100%; height: 100%; border-radius: 50%; object-fit: contain; display: block; padding: 6px;
+            background: radial-gradient(circle at 34% 24%, #263845, #0a141d 74%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.08), inset 0 -10px 18px rgba(0,0,0,.5);
+        }
+        .team-crest .crest-fallback { display: none; place-items: center; font-size: .98rem; font-weight: 900; letter-spacing: -.02em; color: var(--gold); }
+        .team-crest.is-fallback img { display: none; }
+        .team-crest.is-fallback .crest-fallback { display: grid; }
+        .match-card:hover .team-crest { transform: translateY(-3px) scale(1.045); box-shadow: 0 16px 26px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.09), 0 0 26px color-mix(in srgb, var(--gold) 32%, transparent); }
+        .match-card.is-live .team-crest {
+            background: conic-gradient(from 212deg, #7d2733, #ffc2c8 16%, #e8404f 34%, #fff1f2 52%, #8e2b34 74%, #ff8b96 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.07), 0 0 24px color-mix(in srgb, var(--live) 34%, transparent);
+        }
+        .match-card.is-mod .team-crest {
+            box-shadow: 0 10px 20px rgba(0,0,0,.42), 0 0 0 1px color-mix(in srgb, var(--gold) 45%, transparent), 0 0 28px color-mix(in srgb, var(--gold) 38%, transparent);
+        }
+        :root[data-theme="light"] .match-teams {
+            background:
+                radial-gradient(120% 150% at 50% -58%, rgba(167,120,19,.13), transparent 62%),
+                linear-gradient(180deg, #eef4f0, transparent 84%);
+        }
+        :root[data-theme="light"] .team-crest img, :root[data-theme="light"] .team-crest .crest-fallback {
+            background: radial-gradient(circle at 34% 24%, #ffffff, #e6eee9 78%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 -10px 18px rgba(24,52,38,.14);
+        }
+        .team-name { min-width: 0; width: 100%; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.25; font-size: .78rem; font-weight: 800; letter-spacing: -.012em; }
         .score-wrap { display: flex; align-items: center; flex-direction: column; gap: 3px; }
+        .match-teams .score-wrap { align-self: center; gap: 5px; }
+        .match-teams .match-score {
+            font-size: 1.42rem; font-weight: 900; padding: 7px 15px; border-radius: 14px;
+            background: linear-gradient(180deg, color-mix(in srgb, var(--surface-3) 88%, #000), var(--surface-2));
+            border-color: color-mix(in srgb, var(--line-2) 78%, transparent);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 8px 18px rgba(0,0,0,.32);
+        }
+        .match-teams .match-score .score-dash { font-size: .95rem; }
+        .match-card.is-live .match-teams .match-score {
+            border-color: color-mix(in srgb, var(--live) 55%, transparent);
+            background: linear-gradient(180deg, var(--live-soft), color-mix(in srgb, var(--live-soft) 42%, var(--surface-2)));
+        }
+        .match-card.is-mod .match-teams .match-score {
+            border-color: color-mix(in srgb, var(--gold) 58%, transparent);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 8px 18px rgba(0,0,0,.34), 0 0 18px color-mix(in srgb, var(--gold) 20%, transparent);
+        }
+        .match-teams .mt-vs {
+            align-self: center; padding: 10px 14px; border-radius: 13px;
+            background: linear-gradient(180deg, color-mix(in srgb, var(--surface-3) 72%, transparent), transparent);
+            border: 1px dashed color-mix(in srgb, var(--line-2) 72%, transparent);
+            color: var(--muted); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em;
+        }
+        .match-teams .mt-vs.no-score { text-transform: none; letter-spacing: 0; font-size: 0.68rem; white-space: nowrap; font-weight: 600; padding: 8px 11px; }
         .match-score {
             display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
             font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.2; color: var(--ink);
@@ -715,6 +792,9 @@
             .ch-icon-wrap { width: 30px; height: 30px; font-size: .9rem; }
             .ch-name { font-size: 0.68rem; }
             .match-grid { grid-template-columns: 1fr; }
+            .match-teams { padding: 12px 8px 10px; }
+            .team-crest { width: 52px; height: 52px; flex-basis: 52px; }
+            .match-teams .match-score { font-size: 1.28rem; }
             .tabs-list { gap: 16px; }
             .tab-btn { font-size: 0.72rem; }
             .view-btn { font-size: 0.72rem; padding: 4px 8px; }
@@ -841,8 +921,16 @@
         .spotlight-team.home { justify-content: flex-end; text-align: right; }
         .spotlight-team.away { justify-content: flex-start; text-align: left; }
         .spotlight-team-name { min-width: 0; overflow-wrap: anywhere; }
-        .spotlight-team img, .spotlight-crest-fallback { width: 46px; height: 46px; flex: 0 0 46px; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,0,0,.18)); }
-        .spotlight-crest-fallback { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--surface-3); color: var(--accent); font-size: .83rem; font-weight: 900; letter-spacing: -.04em; }
+        .spotlight-team img, .spotlight-crest-fallback {
+            width: 52px; height: 52px; flex: 0 0 52px; object-fit: contain; padding: 7px; border-radius: 50%;
+            background: radial-gradient(circle at 34% 24%, #263845, #0a141d 74%);
+            border: 2px solid color-mix(in srgb, var(--gold) 55%, transparent);
+            box-shadow: 0 10px 22px rgba(0,0,0,.4), 0 0 20px color-mix(in srgb, var(--gold) 22%, transparent);
+        }
+        .spotlight-crest-fallback { display: inline-flex; align-items: center; justify-content: center; color: var(--gold); font-size: .9rem; font-weight: 900; letter-spacing: -.04em; border-style: solid; }
+        :root[data-theme="light"] .spotlight-team img, :root[data-theme="light"] .spotlight-crest-fallback {
+            background: radial-gradient(circle at 34% 24%, #ffffff, #e6eee9 78%);
+        }
         .spotlight-score-wrap { min-width: 90px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
         .spotlight-score { color: var(--ink); font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: .06em; font-variant-numeric: tabular-nums; line-height: 1; }
         .spotlight-vs { color: var(--muted); font-size: 1.05rem; font-weight: 800; letter-spacing: .12em; }
@@ -934,7 +1022,7 @@
         .match-league { color: var(--ink-2); }
         .match-status-tag { font-weight: 850; }
         .match-status-tag.mod { background: var(--gold); color: #211804; }
-        .match-teams { min-height: 44px; font-size: .98rem; }
+        .match-teams { min-height: 114px; font-size: .98rem; }
         .play-match-btn { min-height: 36px; padding: 0 13px; background: var(--accent); color: var(--accent-contrast); border-radius: 9px; font-weight: 900; box-shadow: 0 5px 13px color-mix(in srgb, var(--accent) 16%, transparent); }
         .play-match-btn:hover { background: var(--accent-hover); color: var(--accent-contrast); transform: translateY(-1px); }
         .play-match-btn:active, .spotlight-watch:active, .header-match-btn:active { transform: translateY(1px) scale(.99); }
@@ -977,7 +1065,12 @@
             .spotlight-feature { min-height: 205px; padding: 14px 12px 12px; gap: 11px; }
             .spotlight-team { flex-direction: column; gap: 6px; font-size: .83rem; }
             .spotlight-team.home, .spotlight-team.away { text-align: center; }
-            .spotlight-team img, .spotlight-crest-fallback { width: 37px; height: 37px; flex-basis: 37px; }
+            .spotlight-team img, .spotlight-crest-fallback { width: 40px; height: 40px; flex-basis: 40px; padding: 5px; }
+            .match-teams { padding: 11px 7px 9px; gap: 4px; }
+            .team-crest { width: 48px; height: 48px; flex-basis: 48px; }
+            .team-crest img, .team-crest .crest-fallback { padding: 5px; }
+            .match-teams .match-score { font-size: 1.16rem; padding: 6px 11px; border-radius: 12px; }
+            .team-name { font-size: .72rem; }
             .spotlight-score-wrap { min-width: 65px; }
             .spotlight-score { font-size: 1.55rem; }
             .spotlight-vs { font-size: .86rem; }
@@ -1007,7 +1100,9 @@
             .clock-chip { gap: 4px; }
             .theme-toggle { gap: 5px; }
             .spotlight-feature { min-height: 218px; }
-            .spotlight-team img, .spotlight-crest-fallback { width: 31px; height: 31px; flex-basis: 31px; }
+            .spotlight-team img, .spotlight-crest-fallback { width: 34px; height: 34px; flex-basis: 34px; }
+            .team-crest { width: 42px; height: 42px; flex-basis: 42px; }
+            .match-teams .match-score { font-size: 1.02rem; padding: 5px 9px; }
         }
     </style>
 </head>
@@ -2517,7 +2612,15 @@
                         ? (m._waiting ? "Skor kaynağı geciktiği için başlama saatine göre CANLI varsayıldı; gerçek durum doğrulanınca netleşir"
                                       : "Program saatine göre tahmin; kesin maç sonucu değildir")
                         : "Durum veri kaynağından alındı";
-                    const logo = (u) => u ? '<span class="team-logo"><img loading="lazy" src="' + esc(u) + '" alt="" onerror="this.parentNode.style.display=\'none\'"></span>' : "";
+                    // VIP madalyon: arma, altın halkalı büyük rozet olarak kartın ortasında durur.
+                    // Logo adresi yoksa (ya da yüklenemezse) takım baş harfleri rozetin içine yazılır.
+                    const crest = (u, name) => {
+                        const initials = String(name || "?").trim().split(/\s+/).slice(0, 2)
+                            .map((part) => part.charAt(0)).join("").toUpperCase() || "?";
+                        return '<span class="team-crest' + (u ? "" : " is-fallback") + '" aria-hidden="true">' +
+                            (u ? '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(u) + '" alt="" onerror="this.parentNode.classList.add(\'is-fallback\')">' : "") +
+                            '<span class="crest-fallback">' + esc(initials) + "</span></span>";
+                    };
                     const scoreLabel = m._score ? m.home + " " + m._score[0] + ", " + m.away + " " + m._score[1] : "";
                     const scoreTitle = scoreLabel + (m.scoreUpdatedAt ? " · Skor güncellemesi: " + m.scoreUpdatedAt : "") + (m._scoreStale ? " · Güncel veri bekleniyor" : "");
                     const middle = m._score
@@ -2535,9 +2638,9 @@
                             '<span class="match-status-tag' + tagClass + '" title="' + statusTitle + '">' + tagLabel + "</span>" +
                         "</div>" +
                         '<div class="match-teams">' +
-                            '<span class="match-team home-team">' + logo(m.logoHome) + '<span class="team-name" title="' + esc(m.home) + '">' + esc(m.home) + '</span></span>' +
+                            '<span class="match-team home-team">' + crest(m.logoHome, m.home) + '<span class="team-name" title="' + esc(m.home) + '">' + esc(m.home) + '</span></span>' +
                             middle +
-                            '<span class="match-team away-team"><span class="team-name" title="' + esc(m.away) + '">' + esc(m.away) + '</span>' + logo(m.logoAway) + '</span>' +
+                            '<span class="match-team away-team">' + crest(m.logoAway, m.away) + '<span class="team-name" title="' + esc(m.away) + '">' + esc(m.away) + '</span></span>' +
                         "</div>" +
                         '<div class="match-footer">' +
                             '<span class="match-channel-name"><span>' + esc(m.channelName || "Kanal") + "</span></span>" +
