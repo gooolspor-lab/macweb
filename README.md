@@ -53,6 +53,9 @@ raporlar üreten gelişmiş otomasyon botu.
    - `output/channels.json` dosyasına yazılır ve raporlara eklenir.
 
 5. **GitHub Pages sayfası** (`src/fixbet/site.py` + `src/fixbet/templates/index.html`)
+   - **Tasarım:** sade, açık tema; tek vurgu rengi (yeşil), Inter yazı tipi, düz yüzeyler ve ince kenarlıklar.
+     Renkler ve yüzeyler şablondaki `:root` değişkenlerinde (`--accent`, `--ink`, `--line`, …) toplanır;
+     neon/gradyan ve dekoratif animasyon kullanılmaz.
    - Repo kökündeki **`index.html`** her çalıştırmada şablondan yeniden üretilir
      (tek kaynak: şablon). Sayfada **uydurma/sabit maç yoktur**; gömülen her maç
      kaynaktan çekilen gerçek programdır.
@@ -76,7 +79,7 @@ raporlar üreten gelişmiş otomasyon botu.
      ve mobil görünümde düzeni bozmaz.
    - **Kanala tıkla → yayın player'de:** Alttaki kanal kartına (veya maç
      kartındaki ▶ İZLE'ye) tıklayınca yayın doğrudan oynatıcıda açılır ve sayfa
-     yumuşakça player'e kayar (kısa altın "flash" animasyonu ile).
+     yumuşakça player'e kayar (kısa vurgu çerçevesi ile).
    - **Kompakt kartlar + görünüm seçimi:** Kanal kartları küçültüldü ve
      **▦ Izgara / ☰ Liste** (yatay) seçenekleri eklendi; tercih `localStorage`'da saklanır.
    - Ekstra: marka filtreleri (Bein Sports, S Sport, TRT, Tabii Spor, …), kanal & maç
@@ -131,17 +134,16 @@ raporlar üreten gelişmiş otomasyon botu.
    - Yeni bir extra panel eklemek için `config/extra_channels.yml` → `panels` altına yeni blok
      eklemek yeterlidir; sayfa/bot tarafında kod değişikliği gerekmez.
 
-7. **🏆 Lig puan durumu — LİG PUANI & FİKSTÜR butonları** (`src/fixbet/standings.py` + `config/standings.yml`)
-   - Saatin hemen yanındaki **LİG PUANI** butonu (neon mavi/pembe kenar, solda tablo ikonu)
+7. **Lig puan durumu — LİG PUANI butonu** (`src/fixbet/standings.py` + `config/standings.yml`)
+   - Saatin hemen yanındaki **LİG PUANI** butonu (sade kontur buton, solda tablo ikonu)
      ekranın ortasında karartılmış (`backdrop-filter`) bir **PUAN DURUMU** modalı açar.
-     Modalın dış kenarları neon pembe, sağ üstünde kapatma (X) butonu vardır; **Esc**,
+     Modal beyaz kartta açılır, sağ üstünde kapatma (X) butonu vardır; **Esc**,
      X veya karartılmış alana tıklama ile kapanır.
-   - LİG PUANI butonunun hemen yanında bulunan **FİKSTÜR** butonu (`<a href="go:fixtor">`), fikstür
-     yönlendirme bağlantısına (`go:fixtor`) gider.
+   - FİKSTÜR butonu kaldırıldı (yalnızca LİG PUANI kaldı).
    - Tablo sütunları: **SIRA · TAKIM · O · G · B · M · AV · P**, satır aralarında ince ayraç çizgileri.
    - **Sıra bölgeleri (renkli şeritler):** ilk sıralar *yükseliş/Avrupa hattı*, son sıralar *küme düşme
      hattı* olarak işaretlenir — satır zemininde soldan sağa sönen renk, sol kenarda 3px şerit, sıra
-     rozetinde renk (🟡 1 → Şampiyonlar Ligi, 🟢 2-3 → Avrupa kupaları, 🔴 16-18 → küme düşme hattı) ve
+     rozetinde renk (altın: 1 → Şampiyonlar Ligi, yeşil: 2-3 → Avrupa kupaları, kırmızı: 16-18 → küme düşme hattı) ve
      tablonun altında **lejant** (`1 · Şampiyonlar Ligi  2-3 · Avrupa kupaları  16-18 · Küme düşme hattı`).
      Satırın üstüne gelince açıklama tooltip'te de görünür. Bölgeler `config/standings.yml → zones`
      ile lig bazında ayarlanır (yazılmayan ligler `default_zones`/koddaki varsayılanı kullanır,

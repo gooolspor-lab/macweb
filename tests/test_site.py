@@ -194,13 +194,13 @@ def test_league_standings_button_and_modal():
     assert 'id="leagueBtn"' in tpl and "LİG PUANI" in tpl
     assert 'class="league-btn"' in tpl
     assert tpl.index('id="liveClock"') < tpl.index('id="leagueBtn"'), "buton saatten sonra gelmeli"
-    assert 'id="fixtureBtn"' in tpl and 'href="go:fixtor"' in tpl and "FİKSTÜR" in tpl
-    assert tpl.index('id="leagueBtn"') < tpl.index('id="fixtureBtn"'), "fikstür butonu lig butonundan sonra gelmeli"
+    # fikstür butonu kaldırıldı: işaretleme, etiket ve yönlendirme kalmamalı
+    assert 'id="fixtureBtn"' not in tpl and 'go:fixtor' not in tpl and "FİKSTÜR" not in tpl
     assert tpl.count('class="tab-btn') == 3, "sekme sayısı değişmemeli"
-    # modal: karartma, neon pembe kenar, kapatma butonu, başlık
+    # modal: karartma, sade kenar, kapatma butonu, başlık
     assert 'id="leagueModal"' in tpl and 'id="leagueModalClose"' in tpl
     assert "backdrop-filter: blur" in tpl
-    assert "border: 2px solid var(--neon-pink)" in tpl
+    assert "border: 1px solid var(--line)" in tpl
     assert 'class="modal-title" id="leagueModalTitle">PUAN DURUMU<' in tpl
     # sütunlar
     head = tpl[tpl.index('id="standingsTable"'):tpl.index('id="standingsBody"')]
@@ -289,7 +289,7 @@ def test_zone_legend_groups_consecutive_ranks():
 
     html = site._zone_legend_html(rows)
     assert "2-3" in html and "Avrupa kupaları" in html and "17-18" in html
-    assert "#ffcc33" in html and "#00ff88" in html or "#7dffc0" in html
+    assert "#a7780a" in html and "#0b7a55" in html and "#d7392a" in html
 
     # bölge bilgisi sayfaya gömülen sade JSON'da korunur
     data = {"source": "mackolik", "generated_at": "", "leagues": [{

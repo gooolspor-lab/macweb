@@ -135,4 +135,4 @@ def test_repository_panel_and_menu_are_configured():
     templates = tara.get("page_templates") or [tara.get("page_template")]
     assert str(templates[0]).strip().endswith("/channel/watch/{slug}")
     template = (extras.config.ROOT / "src" / "fixbet" / "templates" / "index.html").read_text(encoding="utf-8")
-    assert "⚡ EXTRA PANELLER" in template
+    assert "EXTRA PANELLER" in template

@@ -1,5 +1,5 @@
 /**
- * İNADİNA TV index.html arayüz testleri (jsdom).
+ * MEGA STAR TV index.html arayüz testleri (jsdom).
  *
  * Bu testler üretilen index.html'in *gerçek* JavaScript'ini çalıştırır:
  * kanal kartları, ızgara/liste görünümü, player'e kaydırma, günün maçları,
@@ -166,7 +166,7 @@ test("VIP Yayın düğmesi Trend48’i aynı iframe’de açar ve önceki kanala
 
   button.click();
   cards(window)[1].click();
-  assert.equal(button.textContent, "★ VIP Yayın", "başka kanal seçilince eski toggle state’i temizlenmeli");
+  assert.equal(button.textContent, "VIP Yayın", "başka kanal seçilince eski toggle state’i temizlenmeli");
   const newChannelUrl = iframe.getAttribute("src");
   button.click();
   button.click();
@@ -907,29 +907,29 @@ test("LİG PUANI butonu saatin hemen yanında ve tablo ikonu içeriyor", () => {
   const btn = HTML.slice(HTML.indexOf('id="leagueBtn"'));
   assert.ok(/lg-icon[\s\S]{0,80}<svg/.test(btn), "butonun solunda tablo ikonu yok");
   assert.ok(HTML.indexOf('id="liveClock"') < HTML.indexOf('id="leagueBtn"'), "buton saatten önce gelmemeli");
-  // neon mavi + pembe parlama
+  // sade kontur buton: neon/gradyan kalıntısı olmamalı
   const css = HTML.slice(HTML.indexOf(".league-btn {"), HTML.indexOf(".league-btn .lg-caret"));
-  assert.ok(/rgba\(0,234,255/.test(css) && /rgba\(255,45,122/.test(css), "mavi+pembe neon parlama yok");
+  assert.ok(!/rgba\(0,234,255|rgba\(255,45,122|gradient/.test(css), "league-btn'de neon parlama/gradyan kalmış");
 });
 
-test("FİKSTÜR butonu LİG PUANI butonunun yanında ve go:fixtor bağlantısı içeriyor", () => {
-  assert.ok(HTML.includes('id="fixtureBtn"'), "FİKSTÜR butonu yok");
-  assert.ok(HTML.includes('href="go:fixtor"'), "go:fixtor yönlendirme bağlantısı yok");
-  assert.ok(HTML.includes("FİKSTÜR"), "FİKSTÜR etiketi yok");
-  assert.ok(HTML.includes("fixture-btn"), "fixture-btn sınıfı yok");
-  assert.ok(HTML.indexOf('id="leagueBtn"') < HTML.indexOf('id="fixtureBtn"'), "Fikstür butonu LigPuan butonunun yanında olmalı");
+test("FİKSTÜR butonu kaldırıldı; üst bardaki LİG PUANI butonu korunuyor", () => {
+  assert.ok(!HTML.includes('id="fixtureBtn"'), "FİKSTÜR butonu hâlâ var");
+  assert.ok(!HTML.includes('go:fixtor'), "go:fixtor bağlantısı hâlâ var");
+  assert.ok(!HTML.includes("FİKSTÜR"), "FİKSTÜR etiketi hâlâ var");
+  assert.ok(!HTML.includes("fixture-btn"), "fixture-btn sınıfı hâlâ var");
+  assert.ok(HTML.includes('id="leagueBtn"'), "LİG PUANI butonu kaybolmamalı");
 });
 
-test("PUAN DURUMU modalı backdrop-filter karartma ve neon pembe kenar kullanıyor", () => {
+test("PUAN DURUMU modalı backdrop-filter karartma ve sade kontur kullanıyor", () => {
   assert.ok(/\.modal-overlay \{[\s\S]*?backdrop-filter: blur/.test(HTML), "backdrop-filter karartma yok");
-  assert.ok(/\.modal-panel \{[\s\S]*?border: 2px solid var\(--neon-pink\)/.test(HTML), "neon pembe modal kenarı yok");
+  assert.ok(/\.modal-panel \{[\s\S]*?border: 1px solid var\(--line\)/.test(HTML), "modal kenarı yok");
   assert.ok(HTML.includes('id="leagueModalClose"'), "kapatma (X) butonu yok");
   assert.ok(/<h2 class="modal-title"[^>]*>PUAN DURUMU<\/h2>/.test(HTML), "PUAN DURUMU başlığı yok");
-  assert.ok(/\.modal-title \{[\s\S]*?color: var\(--neon-pink\)/.test(HTML), "başlık neon pembe değil");
+  assert.ok(/\.modal-title \{[\s\S]*?color: var\(--ink\)/.test(HTML), "başlık koyu renk değil");
   // erişilebilirlik
   assert.ok(HTML.includes('aria-modal="true"') && HTML.includes('aria-labelledby="leagueModalTitle"'), "dialog ARIA eksik");
   // satır ayracı: liste görünümü için belirgin çizgi
-  assert.ok(/\.standings-table tbody td \{[\s\S]*?border-bottom: 1px solid rgba\(255,255,255,0\.16\)/.test(HTML),
+  assert.ok(/\.standings-table tbody td \{[\s\S]*?border-bottom: 1px solid var\(--line\)/.test(HTML),
     "satır ayracı yok");
 });
 
@@ -1145,8 +1145,8 @@ test("bölge renkleri CSS'te tanımlı ve lejant sıra aralıklarını gösteriy
   // ▲ yükseliş hattı / ▼ küme düşme hattı okları (pseudo-element: hücre metnini kirletmez)
   assert.ok(/tr\.zone-europa \.cell-team::after \{ content: "▲"/.test(HTML), "yükseliş oku (▲) yok");
   assert.ok(/tr\.zone-relegation \.cell-team::after \{ content: "▼"/.test(HTML), "düşme oku (▼) yok");
-  assert.ok(/<span style="color:#ff9ba7;">▼<\/span>/.test(HTML), "noscript tabloda düşme oku yok");
-  assert.ok(/<span style="color:#7dffc0;">▲<\/span>/.test(HTML), "noscript tabloda yükseliş oku yok");
+  assert.ok(/<span style="color:#d7392a;">▼<\/span>/.test(HTML), "noscript tabloda düşme oku yok");
+  assert.ok(/<span style="color:#0b7a55;">▲<\/span>/.test(HTML), "noscript tabloda yükseliş oku yok");
 
   const { window, dom } = await loadPage();
   window.inadina.openLeagueModal();
@@ -1193,8 +1193,8 @@ test("kaynak bölge vermezse not metninden okunur, bilinmeyen bölge işaretsiz 
 
 test("noscript puan tablosu da bölgeleri ve lejantı basıyor", () => {
   const noscript = HTML.slice(HTML.indexOf("<noscript>"), HTML.indexOf("</noscript>"));
-  assert.ok(/box-shadow:inset 3px 0 0 #ffcc33/.test(noscript), "noscript lider şeridi yok");
-  assert.ok(/box-shadow:inset 3px 0 0 #ff9ba7/.test(noscript), "noscript düşme hattı şeridi yok");
+  assert.ok(/box-shadow:inset 3px 0 0 #a7780a/.test(noscript), "noscript lider şeridi yok");
+  assert.ok(/box-shadow:inset 3px 0 0 #d7392a/.test(noscript), "noscript düşme hattı şeridi yok");
   assert.ok(/Küme düşme hattı/.test(noscript) && /Şampiyonlar Ligi/.test(noscript), "noscript lejantı yok");
   // sayfaya gömülen takım adları tekrarsız olmalı (kaynak adı iki kez basıyordu)
   const teams = [...HTML.matchAll(/"team": "([^"]+)"/g)].map((m) => m[1]);

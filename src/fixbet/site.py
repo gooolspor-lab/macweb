@@ -1,6 +1,6 @@
 """GitHub Pages için repo köküne index.html üretir.
 
-Kullanıcının İNADİNA TV şablonunu (src/fixbet/templates/index.html) kullanır ve:
+Kullanıcının MEGA STAR TV şablonunu (src/fixbet/templates/index.html) kullanır ve:
   * 7/24 kanal listesini güncel adresle üretir (ad, marka, ikon, durum),
   * günün maçlarını **gerçek kaynak verisinden** gömer (uydurma/sabit maç yok),
   * istemcinin taze veri çekebilmesi için output/today_matches.json yolunu verir.
@@ -274,11 +274,11 @@ def standings_payload(data: dict[str, Any] | None) -> dict[str, Any]:
 
 # Sıra bölgesi renkleri (noscript tablosu + açıklama satırı) — arayüzdeki CSS ile aynı tonlar.
 _ZONE_COLORS = {
-    "champions": ("#ffcc33", "rgba(255,204,51,0.14)"),
-    "europa": ("#7dffc0", "rgba(0,255,136,0.12)"),
-    "qualify": ("#7dffc0", "rgba(0,255,136,0.12)"),
-    "relegation": ("#ff9ba7", "rgba(255,45,122,0.14)"),
-    "relegate": ("#ff9ba7", "rgba(255,45,122,0.14)"),
+    "champions": ("#a7780a", "#f8efd3"),
+    "europa": ("#0b7a55", "#e4f2eb"),
+    "qualify": ("#0b7a55", "#e4f2eb"),
+    "relegation": ("#d7392a", "#fbe9e6"),
+    "relegate": ("#d7392a", "#fbe9e6"),
 }
 _ZONE_FALLBACK_LABELS = {"champions": "Şampiyonlar Ligi", "europa": "Avrupa kupaları",
                          "qualify": "Avrupa kupaları", "relegation": "Küme düşme hattı",
@@ -322,11 +322,11 @@ def _zone_legend_html(rows: list[dict[str, Any]]) -> str:
     items = "".join(
         f'<span style="display:inline-flex;align-items:center;gap:5px;margin:0 10px 4px 0;">'
         f'<i style="width:10px;height:10px;border-radius:3px;display:inline-block;'
-        f'background:{_ZONE_COLORS.get(g["zone"], ("#fff", "#fff"))[0]};"></i>'
-        f'<b style="color:{_ZONE_COLORS.get(g["zone"], ("#ece7f8", "#fff"))[0]};">{escape(_zone_range_text(g))}</b>'
+        f'background:{_ZONE_COLORS.get(g["zone"], ("#cfccc1", "#fff"))[0]};"></i>'
+        f'<b style="color:{_ZONE_COLORS.get(g["zone"], ("#101318", "#fff"))[0]};">{escape(_zone_range_text(g))}</b>'
         f'<span style="opacity:.8;">{escape(g["label"])}</span></span>'
         for g in groups)
-    return (f'<p style="margin:6px 0 0;font-size:12px;color:#c9c0de;display:flex;flex-wrap:wrap;">{items}</p>')
+    return (f'<p style="margin:8px 0 0;font-size:12px;color:#6b7280;display:flex;flex-wrap:wrap;">{items}</p>')
 
 
 def _noscript_standings_row(r: dict[str, Any]) -> str:
@@ -334,7 +334,7 @@ def _noscript_standings_row(r: dict[str, Any]) -> str:
     zone = str(r.get("zone") or "").strip()
     color, tint = _ZONE_COLORS.get(zone, ("", ""))
     label = str(r.get("zoneLabel") or _ZONE_FALLBACK_LABELS.get(zone, ""))
-    cell = "padding:4px 6px;border-bottom:1px solid rgba(255,255,255,0.07);"
+    cell = "padding:6px 6px;border-bottom:1px solid #e4e2da;"
     rank_style = cell + (f"color:{color};font-weight:800;box-shadow:inset 3px 0 0 {color};" if color else "")
     row_style = f' style="background:{tint};"' if tint else ""
     team_title = f' title="{escape(label)}"' if label else ""
@@ -367,15 +367,15 @@ def _standings_groups_html(data: dict[str, Any] | None) -> str:
     for lg in payload["leagues"]:
         rows = "".join(_noscript_standings_row(r) for r in lg["rows"])
         blocks.append(
-            f'<h3 style="margin:14px 0 6px;">🏆 {escape(lg["name"])} — PUAN DURUMU</h3>'
-            '<table style="border-collapse:collapse;width:100%;font-size:13px;color:#f4efff;">'
-            '<thead><tr style="color:#ff2d7a;">'
-            + "".join(f'<th style="padding:4px 6px;text-align:{align};border-bottom:1px solid rgba(255,255,255,0.12);">{h}</th>'
+            f'<h3 style="margin:14px 0 6px;">{escape(lg["name"])} — PUAN DURUMU</h3>'
+            '<table style="border-collapse:collapse;width:100%;font-size:13px;color:#101318;">'
+            '<thead><tr style="color:#6b7280;">'
+            + "".join(f'<th style="padding:4px 6px;text-align:{align};border-bottom:1px solid #cfccc1;font-size:11px;letter-spacing:.04em;">{h}</th>'
                       for h, align in (("SIRA", "left"), ("TAKIM", "left"), ("O", "right"), ("G", "right"),
                                        ("B", "right"), ("M", "right"), ("AV", "right"), ("P", "right")))
             + f'</tr></thead><tbody>{rows}</tbody></table>' + _zone_legend_html(lg["rows"]))
     if not blocks:
-        return ('<h3 style="margin:14px 0 6px;">🏆 PUAN DURUMU</h3>'
+        return ('<h3 style="margin:14px 0 6px;">PUAN DURUMU</h3>'
                 '<p class="empty-msg">Puan durumu verisi henüz alınamadı.</p>')
     return "".join(blocks)
 
