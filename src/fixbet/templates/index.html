@@ -1009,6 +1009,179 @@
             .spotlight-feature { min-height: 218px; }
             .spotlight-team img, .spotlight-crest-fallback { width: 31px; height: 31px; flex-basis: 31px; }
         }
+
+        /* =====================================================================
+           VIP KART LOGOLARI — altın madalyon sahnesi
+           Eskiden isimlerin yanında 22px'lik küçük simgeler olan logolar artık
+           kartın yıldızı: takım adının ÜSTÜNDE, altın halkalı büyük madalyonlar
+           içinde, kartın arkasında dev filigranlarıyla birlikte sergileniyor.
+           ===================================================================== */
+        :root {
+            --vip-gold-1: #f7dc8a; --vip-gold-2: #c9962e; --vip-gold-3: #8a5f08;
+            --vip-gold-soft: rgba(201,150,46,.16); --vip-disc: #fdfcf7;
+        }
+        :root[data-theme="light"] { --vip-gold-soft: rgba(167,120,19,.12); }
+
+        /* --- Altın madalyon (her iki kartta da ortak) --- */
+        .vip-crest {
+            position: relative; display: grid; place-items: center; flex: 0 0 auto;
+            width: 74px; height: 74px; border-radius: 50%; padding: 3px;
+            background: conic-gradient(from 215deg, var(--vip-gold-1), var(--vip-gold-2) 22%, #ffeeb8 40%, var(--vip-gold-3) 62%, var(--vip-gold-1) 82%, var(--vip-gold-2));
+            box-shadow: 0 12px 26px rgba(0,0,0,.34), 0 0 0 1px rgba(0,0,0,.22), 0 0 26px var(--vip-gold-soft);
+            transition: transform .35s cubic-bezier(.2,.9,.3,1.4), box-shadow .35s ease;
+        }
+        /* Madalyonun üst kenarındaki ışık çizgisi */
+        .vip-crest::before {
+            content: ""; position: absolute; inset: 1px; border-radius: 50%; pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,.5), transparent 42%);
+        }
+        /* Dönen altın parıltı halkası */
+        .vip-crest::after {
+            content: ""; position: absolute; inset: -6px; border-radius: 50%; pointer-events: none; opacity: 0;
+            background: conic-gradient(from 0deg, transparent 0 68%, rgba(247,220,138,.85) 82%, transparent 96%);
+            transition: opacity .3s ease; animation: vipShineSpin 3.2s linear infinite;
+        }
+        @keyframes vipShineSpin { to { transform: rotate(360deg); } }
+        .vip-crest-disc {
+            width: 100%; height: 100%; border-radius: 50%; overflow: hidden; position: relative;
+            display: grid; place-items: center;
+            background: radial-gradient(circle at 34% 28%, #ffffff, var(--vip-disc) 58%, #e8e4d5);
+            box-shadow: inset 0 0 0 1px rgba(138,95,8,.28), inset 0 -8px 14px rgba(138,95,8,.10);
+        }
+        .vip-crest-disc img {
+            width: 56px; height: 56px; object-fit: contain; display: block; position: relative; z-index: 1;
+            filter: drop-shadow(0 4px 7px rgba(20,16,4,.30)); transform: scale(1.04);
+        }
+        .vip-crest-initials {
+            position: absolute; inset: 0; display: grid; place-items: center; opacity: 0;
+            color: var(--vip-gold-3); font-weight: 900; letter-spacing: -.03em; font-size: 1.15rem;
+            background: linear-gradient(145deg, #fff8e2, #f0dfae);
+        }
+        .vip-crest:not(:has(img)) .vip-crest-initials, .vip-crest.is-broken .vip-crest-initials { opacity: 1; }
+        .vip-crest.is-broken img { display: none; }
+        /* Vitrin (öne çıkan maç) madalyonu: çok daha büyük */
+        .vip-crest--xl { width: 108px; height: 108px; padding: 4px; box-shadow: 0 18px 38px rgba(0,0,0,.42), 0 0 0 1px rgba(0,0,0,.22), 0 0 44px var(--vip-gold-soft); }
+        .vip-crest--xl .vip-crest-disc img { width: 84px; height: 84px; }
+        .vip-crest--xl .vip-crest-initials { font-size: 1.7rem; }
+
+        /* Kart arkasındaki dev, soluk logo filigranları */
+        .vip-watermark { position: absolute; z-index: 0; width: 168px; height: 168px; pointer-events: none; opacity: .09; }
+        .vip-watermark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .vip-watermark--home { left: -34px; bottom: -38px; transform: rotate(-14deg); }
+        .vip-watermark--away { right: -34px; top: -30px; transform: rotate(14deg); }
+        .spotlight-feature .vip-watermark { width: 230px; height: 230px; opacity: .08; }
+        .spotlight-feature .vip-watermark--home { left: -52px; bottom: -64px; top: auto; }
+        .spotlight-feature .vip-watermark--away { right: -52px; top: -56px; bottom: auto; }
+        .spotlight-feature > :not(.vip-watermark) { position: relative; z-index: 1; }
+
+        /* --- Maç kartı: VIP sahne düzeni --- */
+        .match-card { padding: 0 0 13px; gap: 0; isolation: isolate; }
+        .match-card::before {
+            content: ""; position: absolute; z-index: 2; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, var(--vip-gold-2) 28%, var(--vip-gold-1) 50%, var(--vip-gold-2) 72%, transparent);
+        }
+        .match-card > .match-header, .match-card > .match-teams, .match-card > .match-footer { position: relative; z-index: 1; }
+        .match-card > .match-header { padding: 13px 14px 0; }
+        .match-card > .match-footer { margin: 0 14px; }
+        .match-card:hover .vip-crest--home { transform: translateY(-5px) rotate(-4deg) scale(1.07); }
+        .match-card:hover .vip-crest--away { transform: translateY(-5px) rotate(4deg) scale(1.07); }
+        .match-card:hover .vip-crest::after { opacity: 1; }
+        .match-card.is-live .vip-crest { animation: vipLiveRing 1.9s ease-in-out infinite; }
+        @keyframes vipLiveRing {
+            0%, 100% { box-shadow: 0 12px 26px rgba(0,0,0,.34), 0 0 0 1px rgba(0,0,0,.22), 0 0 0 0 rgba(255,100,113,.45); }
+            50% { box-shadow: 0 12px 26px rgba(0,0,0,.34), 0 0 0 1px rgba(0,0,0,.22), 0 0 0 8px rgba(255,100,113,0); }
+        }
+        /* Sahne: logolar artık isimlerin üstünde, ortada altın skor kürsüsü */
+        .match-teams {
+            min-height: 0; margin: 12px 12px 12px; padding: 20px 10px 14px; gap: 4px; align-items: start;
+            border: 1px solid color-mix(in srgb, var(--vip-gold-2) 34%, var(--line));
+            border-radius: 18px; overflow: hidden;
+            background:
+                radial-gradient(ellipse 70% 90% at 50% -10%, var(--vip-gold-soft), transparent 62%),
+                linear-gradient(180deg, color-mix(in srgb, var(--surface) 55%, transparent), color-mix(in srgb, var(--surface-3) 45%, transparent));
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.06), inset 0 -14px 24px rgba(0,0,0,.14);
+        }
+        /* Sahnenin ortasındaki dikey altın ayraç */
+        .match-teams::before {
+            content: ""; position: absolute; top: 14%; bottom: 14%; left: 50%; width: 1px;
+            background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--vip-gold-2) 55%, transparent), transparent);
+        }
+        .match-team, .home-team, .away-team {
+            flex-direction: column; align-items: center; justify-content: flex-start;
+            text-align: center; gap: 7px; position: relative;
+        }
+        .match-teams .team-name {
+            text-align: center; font-size: .94rem; font-weight: 800; line-height: 1.22; letter-spacing: -.01em;
+            -webkit-line-clamp: 2;
+        }
+        .team-side-label {
+            font-size: .55rem; font-weight: 900; letter-spacing: .22em; color: var(--vip-gold-2);
+            text-transform: uppercase; white-space: nowrap;
+        }
+        /* Orta kürsü: skor / VS, madalyonların hizasında altın rozet */
+        .match-teams .score-wrap { margin-top: 16px; position: relative; z-index: 1; }
+        .match-teams .match-score {
+            font-size: 1.3rem; font-weight: 900; padding: 6px 14px; border-radius: 999px; color: var(--ink);
+            background: linear-gradient(180deg, var(--surface), var(--surface-3));
+            border: 1px solid color-mix(in srgb, var(--vip-gold-2) 55%, var(--line));
+            box-shadow: 0 8px 20px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.10), 0 0 18px var(--vip-gold-soft);
+        }
+        .is-live .match-teams .match-score { color: var(--live); border-color: color-mix(in srgb, var(--live) 55%, var(--vip-gold-2)); }
+        .match-teams .mt-vs {
+            margin-top: 22px; width: 44px; height: 44px; display: grid; place-items: center; position: relative; z-index: 1;
+            border-radius: 50%; font-size: .72rem; font-weight: 900; letter-spacing: .08em; color: #2a1d04;
+            background: conic-gradient(from 215deg, var(--vip-gold-1), var(--vip-gold-2) 30%, #ffeeb8 52%, var(--vip-gold-3) 78%, var(--vip-gold-1));
+            border: 1px solid rgba(0,0,0,.25); box-shadow: 0 8px 18px rgba(0,0,0,.32), 0 0 18px var(--vip-gold-soft);
+            text-transform: uppercase;
+        }
+        .match-teams .mt-vs.no-score {
+            width: auto; height: auto; padding: 7px 10px; border-radius: 999px; margin-top: 28px;
+            font-size: .6rem; letter-spacing: .02em; text-transform: none;
+        }
+
+        /* --- Vitrin kartı: logolar sahnenin tam merkezinde --- */
+        .spotlight-teams { align-items: start; gap: 8px; }
+        .spotlight-team, .spotlight-team.home, .spotlight-team.away {
+            flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; gap: 10px;
+        }
+        .spotlight-team:hover .vip-crest { transform: translateY(-4px) scale(1.05); }
+        .spotlight-team:hover .vip-crest::after { opacity: 1; }
+        .spotlight-team-name { font-size: clamp(1rem, 1.6vw, 1.28rem); text-transform: uppercase; letter-spacing: .01em; }
+        .spotlight-score-wrap { margin-top: 26px; position: relative; z-index: 1; }
+        .spotlight-score {
+            padding: 8px 18px; border-radius: 999px;
+            background: linear-gradient(180deg, var(--surface), var(--surface-3));
+            border: 1px solid color-mix(in srgb, var(--vip-gold-2) 55%, var(--line));
+            box-shadow: 0 10px 24px rgba(0,0,0,.32), 0 0 22px var(--vip-gold-soft);
+        }
+        .spotlight-vs {
+            width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%;
+            font-size: .88rem; color: #2a1d04; letter-spacing: .1em;
+            background: conic-gradient(from 215deg, var(--vip-gold-1), var(--vip-gold-2) 30%, #ffeeb8 52%, var(--vip-gold-3) 78%, var(--vip-gold-1));
+            border: 1px solid rgba(0,0,0,.25); box-shadow: 0 10px 22px rgba(0,0,0,.34), 0 0 22px var(--vip-gold-soft);
+        }
+
+        @media (max-width: 700px) {
+            .vip-crest { width: 62px; height: 62px; }
+            .vip-crest-disc img { width: 46px; height: 46px; }
+            .vip-crest--xl { width: 84px; height: 84px; }
+            .vip-crest--xl .vip-crest-disc img { width: 64px; height: 64px; }
+            .match-teams { margin: 10px 10px 10px; padding: 16px 6px 12px; }
+            .match-teams .team-name { font-size: .84rem; }
+            .team-side-label { font-size: .5rem; letter-spacing: .16em; }
+            .match-teams .match-score { font-size: 1.12rem; padding: 5px 11px; }
+            .match-teams .mt-vs { margin-top: 16px; width: 38px; height: 38px; }
+            .spotlight-teams { gap: 4px; }
+            .spotlight-score-wrap { margin-top: 18px; min-width: 0; }
+            .spotlight-team-name { font-size: .86rem; }
+            .vip-watermark { width: 128px; height: 128px; }
+        }
+        @media (max-width: 380px) {
+            .vip-crest { width: 54px; height: 54px; }
+            .vip-crest-disc img { width: 40px; height: 40px; }
+            .vip-crest--xl { width: 72px; height: 72px; }
+            .vip-crest--xl .vip-crest-disc img { width: 54px; height: 54px; }
+        }
     </style>
 </head>
 <body>
@@ -2328,10 +2501,31 @@
             }
 
             /* ---------------- Günün maç vitrini ---------------- */
+            function teamInitials(name) {
+                return String(name || "?").trim().split(/\s+/).slice(0, 2).map((part) => part.charAt(0)).join("").toUpperCase() || "?";
+            }
+
+            /* VIP altın madalyon: logo, porselen bir diskin içinde altın halkayla
+               sergilenir; logo yoksa / yüklenemezse diskin içinde takımın baş
+               harfleri görünür (logo asla sessizce kaybolmaz). */
+            function vipCrest(url, name, xl, side) {
+                const cls = "vip-crest" + (xl ? " vip-crest--xl" : "") + (side ? " vip-crest--" + side : "");
+                const img = url
+                    ? '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(url) + '" alt="" onerror="this.closest(\'.vip-crest\').classList.add(\'is-broken\')">'
+                    : "";
+                return '<span class="' + cls + '" aria-hidden="true"><span class="vip-crest-disc">' +
+                    '<span class="vip-crest-initials">' + esc(teamInitials(name)) + "</span>" + img + "</span></span>";
+            }
+
+            /* Kartın arkasında dev, soluk logo filigranı (VIP poster hissi) */
+            function vipWatermark(url, side) {
+                if (!url) return "";
+                return '<span class="vip-watermark vip-watermark--' + side + '" aria-hidden="true">' +
+                    '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(url) + '" alt="" onerror="this.parentNode.style.display=\'none\'"></span>';
+            }
+
             function teamCrest(url, name) {
-                if (url) return '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(url) + '" alt="" onerror="this.hidden=true">';
-                const initials = String(name || "?").trim().split(/\s+/).slice(0, 2).map((part) => part.charAt(0)).join("").toUpperCase();
-                return '<span class="spotlight-crest-fallback" aria-hidden="true">' + esc(initials || "?") + '</span>';
+                return vipCrest(url, name, true);
             }
 
             function spotlightStatus(match) {
@@ -2403,13 +2597,14 @@
                 const centerNote = featured._score ? (featured._clock || status.note) : status.note;
                 els.spotlightContent.innerHTML =
                     '<article class="spotlight-feature' + (isActiveMatch(featured._status) ? " is-live" : "") + '">' +
+                        vipWatermark(featured.logoHome, "home") + vipWatermark(featured.logoAway, "away") +
                         '<div class="spotlight-feature-head"><span class="spotlight-kicker">' + (featured.isMod ? "★ " : "") + esc(spotlightLabel) + '</span>' +
                             '<span class="spotlight-status ' + status.cls + '">' + (isActiveMatch(featured._status) ? '<span class="live-dot"></span>' : "") + esc(status.label) + '</span></div>' +
                         '<div class="spotlight-league">' + esc(featured.league || featured.sport || "Günün karşılaşması") + '</div>' +
                         '<div class="spotlight-teams">' +
                             '<div class="spotlight-team home">' + teamCrest(featured.logoHome, featured.home) + '<span class="spotlight-team-name">' + esc(featured.home) + '</span></div>' +
                             '<div class="spotlight-score-wrap">' + score + '<span class="spotlight-center-note">' + esc(centerNote) + '</span></div>' +
-                            '<div class="spotlight-team away"><span class="spotlight-team-name">' + esc(featured.away) + '</span>' + teamCrest(featured.logoAway, featured.away) + '</div>' +
+                            '<div class="spotlight-team away">' + teamCrest(featured.logoAway, featured.away) + '<span class="spotlight-team-name">' + esc(featured.away) + '</span></div>' +
                         '</div>' +
                         '<div class="spotlight-feature-foot"><span class="spotlight-channel">◉ Yayın: <strong>' + esc(featured.channelName || "Kanal bilgisi") + '</strong></span>' +
                             '<button type="button" class="spotlight-watch">▶ ' + (isActiveMatch(featured._status) ? "CANLI İZLE" : "MAÇI İZLE") + '</button></div>' +
@@ -2517,7 +2712,7 @@
                         ? (m._waiting ? "Skor kaynağı geciktiği için başlama saatine göre CANLI varsayıldı; gerçek durum doğrulanınca netleşir"
                                       : "Program saatine göre tahmin; kesin maç sonucu değildir")
                         : "Durum veri kaynağından alındı";
-                    const logo = (u) => u ? '<span class="team-logo"><img loading="lazy" src="' + esc(u) + '" alt="" onerror="this.parentNode.style.display=\'none\'"></span>' : "";
+                    const logo = (u, name, side) => vipCrest(u, name, false, side);
                     const scoreLabel = m._score ? m.home + " " + m._score[0] + ", " + m.away + " " + m._score[1] : "";
                     const scoreTitle = scoreLabel + (m.scoreUpdatedAt ? " · Skor güncellemesi: " + m.scoreUpdatedAt : "") + (m._scoreStale ? " · Güncel veri bekleniyor" : "");
                     const middle = m._score
@@ -2529,15 +2724,16 @@
                             ? '<span class="mt-vs no-score" title="Bu maç için veri kaynağından final skoru alınamadı">Skor yok</span>'
                             : '<span class="mt-vs">vs</span>';
                     card.innerHTML =
+                        vipWatermark(m.logoHome, "home") + vipWatermark(m.logoAway, "away") +
                         '<div class="match-header">' +
                             '<span class="match-league">' + m._icon + " <span>" + esc(m.league || "") + "</span></span>" +
                             (m.isMod ? '<span class="match-status-tag mod">⭐ Günün Maçı</span>' : "") +
                             '<span class="match-status-tag' + tagClass + '" title="' + statusTitle + '">' + tagLabel + "</span>" +
                         "</div>" +
                         '<div class="match-teams">' +
-                            '<span class="match-team home-team">' + logo(m.logoHome) + '<span class="team-name" title="' + esc(m.home) + '">' + esc(m.home) + '</span></span>' +
+                            '<span class="match-team home-team">' + logo(m.logoHome, m.home, "home") + '<span class="team-name" title="' + esc(m.home) + '">' + esc(m.home) + '</span><span class="team-side-label">Ev sahibi</span></span>' +
                             middle +
-                            '<span class="match-team away-team"><span class="team-name" title="' + esc(m.away) + '">' + esc(m.away) + '</span>' + logo(m.logoAway) + '</span>' +
+                            '<span class="match-team away-team">' + logo(m.logoAway, m.away, "away") + '<span class="team-name" title="' + esc(m.away) + '">' + esc(m.away) + '</span><span class="team-side-label">Deplasman</span></span>' +
                         "</div>" +
                         '<div class="match-footer">' +
                             '<span class="match-channel-name"><span>' + esc(m.channelName || "Kanal") + "</span></span>" +
