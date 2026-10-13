@@ -1,12 +1,15 @@
 # ⚽ Fixbet TV — Günün Maçları
 
 > **Güncel adres:** https://fixbettv84.com/  
-> **Güncellenme:** 2026-10-13 04:16  
-> **Toplam maç:** 22  |  **Canlı:** 0  |  **Yaklaşan:** 22
+> **Güncellenme:** 2026-10-13 08:11  
+> **Toplam maç:** 22  |  **Canlı:** 1  |  **Yaklaşan:** 21
+
+## 🔴 CANLI
+
+- 🔴 **Newcastle Jets 0 - 0 Gamba Osaka** — CANLI · `10:45` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
 
 ## ⏰ YAKLAŞAN
 
-- ⏰ **Newcastle Jets vs Gamba Osaka** — YAKLAŞAN · `10:45` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Kyoto vs Ratchaburi** — YAKLAŞAN · `13:00` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=sms2>
 - ⏰ **Shanghai Port vs Daejeon Citizen** — YAKLAŞAN · `13:00` | AFC Şampiyonlar Ligi <https://fixbettv84.com/channel.html?id=smarts>
 - ⏰ **Bandırmaspor vs Sivasspor** — YAKLAŞAN · `14:30` | Trendyol 1. Lig <https://fixbettv84.com/channel.html?id=trtspor>
@@ -37,7 +40,7 @@
 ## 🏆 Lig Bazlı
 
 ### AFC Şampiyonlar Ligi
-- ⏰ Newcastle Jets vs Gamba Osaka — 10:45
+- 🔴 Newcastle Jets vs Gamba Osaka — 10:45
 - ⏰ Kyoto vs Ratchaburi — 13:00
 - ⏰ Shanghai Port vs Daejeon Citizen — 13:00
 - ⏰ Buriram vs Beijing Guoan — 15:15
