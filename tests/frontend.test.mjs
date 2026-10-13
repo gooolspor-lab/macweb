@@ -227,6 +227,48 @@ test("ızgara / yatay liste görünümü değiştirilebiliyor", async () => {
   dom.window.close();
 });
 
+test("tema düğmesi koyu ve aydınlık görünüm arasında geçiş yapıp tercihi saklıyor", async () => {
+  const { window, dom } = await loadPage();
+  const toggle = window.document.getElementById("themeToggle");
+  assert.equal(window.document.documentElement.dataset.theme, "dark", "varsayılan tema koyu olmalı");
+  assert.equal(toggle.getAttribute("aria-label"), "Açık temaya geç");
+
+  toggle.click();
+  assert.equal(window.document.documentElement.dataset.theme, "light", "aydınlık tema uygulanmadı");
+  assert.equal(window.localStorage.getItem("macweb.theme"), "light", "tema tercihi saklanmadı");
+  assert.equal(toggle.getAttribute("aria-label"), "Koyu temaya geç");
+  assert.equal(window.document.querySelector('meta[name="theme-color"]').content, "#eff4f1");
+
+  toggle.click();
+  assert.equal(window.document.documentElement.dataset.theme, "dark", "koyu temaya geri dönülemedi");
+  assert.equal(window.localStorage.getItem("macweb.theme"), "dark");
+  dom.window.close();
+});
+
+test("günün maç vitrini gerçek öne çıkan maçı ve Süper Lig kısayolunu gösteriyor", async () => {
+  const { window, dom } = await loadPage();
+  const featured = TODAY.matches.find((match) => match.is_match_of_day) || TODAY.matches[0];
+  const featureCard = window.document.querySelector("#spotlightContent .spotlight-feature");
+  assert.ok(featureCard, "öne çıkan maç kartı çizilmedi");
+  assert.ok(featureCard.textContent.includes(featured.home) && featureCard.textContent.includes(featured.away),
+    "gerçek günün maçı vitrinde yok");
+  assert.equal(window.document.getElementById("hubMatchCount").textContent, String(TODAY.matches.length));
+  assert.equal(window.document.getElementById("superLigShortcut").textContent.includes("Trendyol Süper Lig"), true);
+  assert.ok([...window.document.querySelectorAll("#matchFilterRow .chip")].some((chip) => chip.textContent.includes("Trendyol Süper Lig")),
+    "lig filtrelerinde Trendyol Süper Lig kısayolu bulunmuyor");
+
+  const expectedLeagueMatches = TODAY.matches.filter((match) => /süper lig/i.test(match.league) && !/1\. lig|2\. lig/i.test(match.league));
+  window.document.getElementById("superLigShortcut").click();
+  assert.equal(window.inadina.state.activeTab, "matchesTab");
+  assert.equal(window.inadina.state.activeLeague, "Trendyol Süper Lig");
+  assert.equal(matchCards(window).length, expectedLeagueMatches.length, "Süper Lig filtresi yanlış maçları gösterdi");
+  if (!expectedLeagueMatches.length) {
+    assert.ok(window.document.getElementById("matchesGrid").textContent.includes("Bugün Trendyol Süper Lig için listelenmiş maç bulunmuyor."),
+      "maç yok durumu açıkça belirtilmedi");
+  }
+  dom.window.close();
+});
+
 test("günün maçları gerçek programdan geliyor", async () => {
   const { window, dom } = await loadPage();
   window.inadina.setTab("matchesTab");
@@ -859,9 +901,13 @@ test("yüklenemeyen CDN Promise'i sıfırlanır, tekrar deneme yeni script yükl
 test('gecikmiş liste isteği daha yeni dinamik skoru ezmez',async()=>{
   const {window}=await loadPage();
   const pending=[];
-  window.fetch=(url)=>String(url).startsWith('https://data-reality.com/')
-    ? Promise.resolve({ok:false,status:503})
-    : new Promise(resolve=>pending.push(resolve));
+  window.fetch=(url)=>{
+    const target=String(url);
+    if(target.startsWith('https://data-reality.com/')) return Promise.resolve({ok:false,status:503});
+    if(target.includes('today_matches.json')) return new Promise(resolve=>pending.push(resolve));
+    // Canlı skor/puan durumu istekleri bu regresyonun kapsamı dışında; hemen düşür.
+    return Promise.resolve({ok:false,status:503,json:async()=>({})});
+  };
   const old=window.inadina.refreshMatches();
   const fresh=window.inadina.refreshMatches();
   await tick(); // canlı feed düşer; iki istek artık snapshot yedeğinde bekler
